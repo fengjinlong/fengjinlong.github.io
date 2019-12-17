@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>搭建vue | 个人博客</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.d9af7a00.css" as="style"><link rel="preload" href="/assets/js/app.6ba358d5.js" as="script"><link rel="preload" href="/assets/js/2.ae98e73b.js" as="script"><link rel="preload" href="/assets/js/47.639c4fd3.js" as="script"><link rel="prefetch" href="/assets/js/10.42ff595e.js"><link rel="prefetch" href="/assets/js/11.4ed22736.js"><link rel="prefetch" href="/assets/js/12.6a6a3966.js"><link rel="prefetch" href="/assets/js/13.2dc17c00.js"><link rel="prefetch" href="/assets/js/14.ecd84e84.js"><link rel="prefetch" href="/assets/js/15.8e63941b.js"><link rel="prefetch" href="/assets/js/16.20bbf036.js"><link rel="prefetch" href="/assets/js/17.cee65893.js"><link rel="prefetch" href="/assets/js/18.210997b6.js"><link rel="prefetch" href="/assets/js/19.6a9e1c28.js"><link rel="prefetch" href="/assets/js/20.58544cb3.js"><link rel="prefetch" href="/assets/js/21.13c2449f.js"><link rel="prefetch" href="/assets/js/22.b999c181.js"><link rel="prefetch" href="/assets/js/23.ba0e1341.js"><link rel="prefetch" href="/assets/js/24.4d053282.js"><link rel="prefetch" href="/assets/js/25.afea9c0f.js"><link rel="prefetch" href="/assets/js/26.eebee834.js"><link rel="prefetch" href="/assets/js/27.b5e919f8.js"><link rel="prefetch" href="/assets/js/28.eb2b8d47.js"><link rel="prefetch" href="/assets/js/29.39ddf55c.js"><link rel="prefetch" href="/assets/js/3.01798808.js"><link rel="prefetch" href="/assets/js/30.6d0c38c0.js"><link rel="prefetch" href="/assets/js/31.ae50bd7b.js"><link rel="prefetch" href="/assets/js/32.8f993527.js"><link rel="prefetch" href="/assets/js/33.e7076b44.js"><link rel="prefetch" href="/assets/js/34.02650f79.js"><link rel="prefetch" href="/assets/js/35.78660043.js"><link rel="prefetch" href="/assets/js/36.5720a95b.js"><link rel="prefetch" href="/assets/js/37.61ee918b.js"><link rel="prefetch" href="/assets/js/38.dfa679d1.js"><link rel="prefetch" href="/assets/js/39.ed80ae84.js"><link rel="prefetch" href="/assets/js/4.086bf268.js"><link rel="prefetch" href="/assets/js/40.984dfb70.js"><link rel="prefetch" href="/assets/js/41.39b0efef.js"><link rel="prefetch" href="/assets/js/42.348c0630.js"><link rel="prefetch" href="/assets/js/43.af859649.js"><link rel="prefetch" href="/assets/js/44.231224a1.js"><link rel="prefetch" href="/assets/js/45.58ade8a2.js"><link rel="prefetch" href="/assets/js/46.87a325ea.js"><link rel="prefetch" href="/assets/js/48.17b33593.js"><link rel="prefetch" href="/assets/js/49.f5dc4f70.js"><link rel="prefetch" href="/assets/js/5.33e71d3e.js"><link rel="prefetch" href="/assets/js/50.e91de543.js"><link rel="prefetch" href="/assets/js/51.8e808c23.js"><link rel="prefetch" href="/assets/js/52.210b18bf.js"><link rel="prefetch" href="/assets/js/53.51bb9c18.js"><link rel="prefetch" href="/assets/js/54.cc3b4480.js"><link rel="prefetch" href="/assets/js/55.d360f572.js"><link rel="prefetch" href="/assets/js/56.2a89706d.js"><link rel="prefetch" href="/assets/js/6.45b5ea40.js"><link rel="prefetch" href="/assets/js/7.227a1975.js"><link rel="prefetch" href="/assets/js/8.9cffc684.js"><link rel="prefetch" href="/assets/js/9.62b6f021.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d9af7a00.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">个人博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">vue</a></div><div class="nav-item"><a href="/" class="nav-link">css</a></div><div class="nav-item"><a href="/" class="nav-link">js</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">github</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/fengjinlong" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  1
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/fengjinlong" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  2
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">vue</a></div><div class="nav-item"><a href="/" class="nav-link">css</a></div><div class="nav-item"><a href="/" class="nav-link">js</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">github</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/fengjinlong" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  1
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/fengjinlong" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  2
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JavaScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTML</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>linux</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>http</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>docker</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>性能</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>yarn</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>php</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>node</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>gulp</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>typescript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>webpack</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/webpack/搭建vue.html" class="active sidebar-link">搭建vue</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/webpack/搭建vue.html#搭建vue" class="sidebar-link">搭建vue</a></li></ul></li><li><a href="/webpack/优化.html" class="sidebar-link">优化</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>mac</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>react</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>interview</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>functional</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>手写代码</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>git</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JSON</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>优化</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>博文</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="搭建vue"><a href="#搭建vue" aria-hidden="true" class="header-anchor">#</a> 搭建vue</h2> <blockquote><p>package.json</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;name&quot;: &quot;testWebpack&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;dependencies&quot;: {
+    &quot;webpack-cli&quot;: &quot;^3.3.9&quot;
+  },
+  &quot;devDependencies&quot;: {
+    &quot;@babel/plugin-transform-runtime&quot;: &quot;^7.6.2&quot;,
+    &quot;babel-core&quot;: &quot;^6.26.3&quot;,
+    &quot;babel-loader&quot;: &quot;^7.1.5&quot;,
+    &quot;babel-plugin-transform-runtime&quot;: &quot;^6.23.0&quot;,
+    &quot;babel-polyfill&quot;: &quot;^6.26.0&quot;,
+    &quot;babel-preset-env&quot;: &quot;^1.7.0&quot;,
+    &quot;babel-preset-stage-3&quot;: &quot;^6.24.1&quot;,
+    &quot;clean-webpack-plugin&quot;: &quot;^3.0.0&quot;,
+    &quot;cross-env&quot;: &quot;^6.0.3&quot;,
+    &quot;css-loader&quot;: &quot;^3.2.0&quot;,
+    &quot;file-loader&quot;: &quot;^4.2.0&quot;,
+    &quot;happypack&quot;: &quot;^5.0.1&quot;,
+    &quot;html-webpack-plugin&quot;: &quot;^3.2.0&quot;,
+    &quot;node-sass&quot;: &quot;^4.13.0&quot;,
+    &quot;progress-bar-webpack-plugin&quot;: &quot;^1.12.1&quot;,
+    &quot;speed-measure-webpack-plugin&quot;: &quot;^1.3.1&quot;,
+    &quot;style-loader&quot;: &quot;^1.0.0&quot;,
+    &quot;stylus&quot;: &quot;^0.54.7&quot;,
+    &quot;stylus-loader&quot;: &quot;^3.0.2&quot;,
+    &quot;uglifyjs-webpack-plugin&quot;: &quot;^2.2.0&quot;,
+    &quot;vue&quot;: &quot;^2.6.10&quot;,
+    &quot;vue-loader&quot;: &quot;^15.7.1&quot;,
+    &quot;vue-style-loader&quot;: &quot;^4.1.2&quot;,
+    &quot;vue-template-compiler&quot;: &quot;^2.6.10&quot;,
+    &quot;webpack&quot;: &quot;^4.41.2&quot;,
+    &quot;webpack-build-notifier&quot;: &quot;^2.0.0&quot;,
+    &quot;webpack-dashboard&quot;: &quot;^3.2.0&quot;,
+    &quot;webpack-dev-server&quot;: &quot;^3.9.0&quot;
+  },
+  &quot;scripts&quot;: {
+    &quot;dev&quot;: &quot;cross-env --mode=development webpack-dev-server --hot&quot;,
+    &quot;build&quot;: &quot;cross-env webpack --mode=production  --progress --hide-modules&quot;
+  },
+  &quot;keywords&quot;: [],
+  &quot;author&quot;: &quot;&quot;,
+  &quot;license&quot;: &quot;ISC&quot;
+}
+
+</code></pre></div><blockquote><p>webpack.config.js</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>const { resolve } = require('path')
+const webpack = require('webpack')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+let VueLoaderPlugin = require('vue-loader/lib/plugin');
+const SpeedMeasurePlugin = require(&quot;speed-measure-webpack-plugin&quot;);
+const smp = new SpeedMeasurePlugin();
+// 压缩设置缓存
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+// 多核
+
+const HappyPack = require('happypack')
+const os = require('os')
+// 开辟一个线程池
+// 拿到系统CPU的最大核数，happypack 将编译工作灌满所有线程
+const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length })
+
+// 体验
+var WebpackBuildNotifierPlugin = require('webpack-build-notifier');
+var ProgressBarPlugin = require('progress-bar-webpack-plugin');
+
+
+console.log(1)
+console.log(process.env)
+const config = {
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+      }),
+    ],
+  },
+  mode: process.env.NODE_ENV,
+  entry: './src/main.js',
+  output: {
+    path: resolve(__dirname, 'dist'),
+    // chunkFilename: '[name].bundle.js',
+    filename: 'bundle.js'
+  },
+  performance: {
+
+    hints: false
+
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
+  },
+  devServer: {
+    port: 7000,
+    historyApiFallback: true
+  },
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js'
+    }
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          'vue-style-loader',
+          'css-loader'
+        ]
+      },
+      {
+        test: /\.styl$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'stylus-loader'
+        ],
+      },
+      // {
+      //   test: /(\.jsx|\.js)$/,
+      //   use: {
+      //     loader: &quot;babel-loader&quot;
+      //   },
+      //   exclude: /node_modules/
+      // },
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: 'happypack/loader?id=js',
+      },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]?[hash]'
+        }
+      },
+      { test: /\.vue$/, loader: 'vue-loader' }
+
+    ]
+  },
+  devtool: '#eval-source-map',
+  plugins: [
+    
+    new VueLoaderPlugin(),
+    new HappyPack({
+      id: 'js',
+      threadPool: happyThreadPool,
+      loaders: [
+        {
+          loader: 'babel-loader',
+        },
+      ],
+    }),
+    new HtmlWebpackPlugin({
+      // filename: 'index.html',//生成的文件名
+      template: './index.html',//指定打包压缩的文件
+      minify: {
+        removeComments: true,//清除注释
+        collapseWhitespace: true//清理空格
+      }
+    }),
+    new CleanWebpackPlugin(),
+    new WebpackBuildNotifierPlugin({
+      title: &quot;My Project Webpack Build&quot;,
+      // logo: path.resolve(&quot;./img/favicon.png&quot;),
+      suppressSuccess: true
+    }),
+    new ProgressBarPlugin()
+  ]
+}
+
+module.exports = smp.wrap(config)
+</code></pre></div><blockquote><p>main.js</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>import Vue from 'vue';
+import App from './App.vue'
+
+const root = document.createElement('div') //创建div节点
+document.body.appendChild(root)
+new Vue({
+  render: h =&gt; h(App)
+}).$mount(root)
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">有志者，事竞成；苦心人，天不负: </span> <span class="time">10/29/2019, 9:53:47 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/typescript/ts.html" class="prev">
+          typescript
+        </a></span> <span class="next"><a href="/webpack/优化.html">
+          优化
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.6ba358d5.js" defer></script><script src="/assets/js/2.ae98e73b.js" defer></script><script src="/assets/js/47.639c4fd3.js" defer></script>
+  </body>
+</html>

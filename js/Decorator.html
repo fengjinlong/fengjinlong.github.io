@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Decorators | 个人博客</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.d9af7a00.css" as="style"><link rel="preload" href="/assets/js/app.6ba358d5.js" as="script"><link rel="preload" href="/assets/js/2.ae98e73b.js" as="script"><link rel="preload" href="/assets/js/20.58544cb3.js" as="script"><link rel="prefetch" href="/assets/js/10.42ff595e.js"><link rel="prefetch" href="/assets/js/11.4ed22736.js"><link rel="prefetch" href="/assets/js/12.6a6a3966.js"><link rel="prefetch" href="/assets/js/13.2dc17c00.js"><link rel="prefetch" href="/assets/js/14.ecd84e84.js"><link rel="prefetch" href="/assets/js/15.8e63941b.js"><link rel="prefetch" href="/assets/js/16.20bbf036.js"><link rel="prefetch" href="/assets/js/17.cee65893.js"><link rel="prefetch" href="/assets/js/18.210997b6.js"><link rel="prefetch" href="/assets/js/19.6a9e1c28.js"><link rel="prefetch" href="/assets/js/21.13c2449f.js"><link rel="prefetch" href="/assets/js/22.b999c181.js"><link rel="prefetch" href="/assets/js/23.ba0e1341.js"><link rel="prefetch" href="/assets/js/24.4d053282.js"><link rel="prefetch" href="/assets/js/25.afea9c0f.js"><link rel="prefetch" href="/assets/js/26.eebee834.js"><link rel="prefetch" href="/assets/js/27.b5e919f8.js"><link rel="prefetch" href="/assets/js/28.eb2b8d47.js"><link rel="prefetch" href="/assets/js/29.39ddf55c.js"><link rel="prefetch" href="/assets/js/3.01798808.js"><link rel="prefetch" href="/assets/js/30.6d0c38c0.js"><link rel="prefetch" href="/assets/js/31.ae50bd7b.js"><link rel="prefetch" href="/assets/js/32.8f993527.js"><link rel="prefetch" href="/assets/js/33.e7076b44.js"><link rel="prefetch" href="/assets/js/34.02650f79.js"><link rel="prefetch" href="/assets/js/35.78660043.js"><link rel="prefetch" href="/assets/js/36.5720a95b.js"><link rel="prefetch" href="/assets/js/37.61ee918b.js"><link rel="prefetch" href="/assets/js/38.dfa679d1.js"><link rel="prefetch" href="/assets/js/39.ed80ae84.js"><link rel="prefetch" href="/assets/js/4.086bf268.js"><link rel="prefetch" href="/assets/js/40.984dfb70.js"><link rel="prefetch" href="/assets/js/41.39b0efef.js"><link rel="prefetch" href="/assets/js/42.348c0630.js"><link rel="prefetch" href="/assets/js/43.af859649.js"><link rel="prefetch" href="/assets/js/44.231224a1.js"><link rel="prefetch" href="/assets/js/45.58ade8a2.js"><link rel="prefetch" href="/assets/js/46.87a325ea.js"><link rel="prefetch" href="/assets/js/47.639c4fd3.js"><link rel="prefetch" href="/assets/js/48.17b33593.js"><link rel="prefetch" href="/assets/js/49.f5dc4f70.js"><link rel="prefetch" href="/assets/js/5.33e71d3e.js"><link rel="prefetch" href="/assets/js/50.e91de543.js"><link rel="prefetch" href="/assets/js/51.8e808c23.js"><link rel="prefetch" href="/assets/js/52.210b18bf.js"><link rel="prefetch" href="/assets/js/53.51bb9c18.js"><link rel="prefetch" href="/assets/js/54.cc3b4480.js"><link rel="prefetch" href="/assets/js/55.d360f572.js"><link rel="prefetch" href="/assets/js/56.2a89706d.js"><link rel="prefetch" href="/assets/js/6.45b5ea40.js"><link rel="prefetch" href="/assets/js/7.227a1975.js"><link rel="prefetch" href="/assets/js/8.9cffc684.js"><link rel="prefetch" href="/assets/js/9.62b6f021.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d9af7a00.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">个人博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">vue</a></div><div class="nav-item"><a href="/" class="nav-link">css</a></div><div class="nav-item"><a href="/" class="nav-link">js</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">github</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/fengjinlong" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  1
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/fengjinlong" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  2
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">vue</a></div><div class="nav-item"><a href="/" class="nav-link">css</a></div><div class="nav-item"><a href="/" class="nav-link">js</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">github</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/fengjinlong" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  1
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/fengjinlong" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  2
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>JavaScript</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/js/defineProperty.html" class="sidebar-link">Object属性系列</a></li><li><a href="/js/Decorator.html" class="active sidebar-link">Decorators</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/js/Decorator.html#decorators" class="sidebar-link">Decorators</a></li><li class="sidebar-sub-header"><a href="/js/Decorator.html#函数装饰器" class="sidebar-link">函数装饰器</a></li><li class="sidebar-sub-header"><a href="/js/Decorator.html#方法装饰器实例" class="sidebar-link">方法装饰器实例</a></li><li class="sidebar-sub-header"><a href="/js/Decorator.html#属性装饰器" class="sidebar-link">属性装饰器</a></li><li class="sidebar-sub-header"><a href="/js/Decorator.html#class-装饰器" class="sidebar-link">Class 装饰器</a></li><li class="sidebar-sub-header"><a href="/js/Decorator.html#参数装饰器" class="sidebar-link">参数装饰器</a></li><li class="sidebar-sub-header"><a href="/js/Decorator.html#小结" class="sidebar-link">小结</a></li></ul></li><li><a href="/js/Decorator2.html" class="sidebar-link">Decorator 应用</a></li><li><a href="/js/eventBus.html" class="sidebar-link">eventBus</a></li><li><a href="/js/模块.html" class="sidebar-link">模块</a></li><li><a href="/js/bind&amp;new.html" class="sidebar-link">bind</a></li><li><a href="/js/es5.html" class="sidebar-link">ES5</a></li><li><a href="/js/es6.html" class="sidebar-link">ES6</a></li><li><a href="/js/语言精髓.html" class="sidebar-link">原型</a></li><li><a href="/js/promise.html" class="sidebar-link">Promise基础</a></li><li><a href="/js/promise思路.html" class="sidebar-link">手写思路</a></li><li><a href="/js/深拷贝.html" class="sidebar-link">深拷贝</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTML</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>linux</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>http</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>docker</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>性能</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>yarn</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>php</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>node</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>gulp</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>typescript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>webpack</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>mac</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>react</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>interview</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>functional</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>手写代码</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>git</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JSON</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>优化</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>博文</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="decorators"><a href="#decorators" aria-hidden="true" class="header-anchor">#</a> Decorators</h2> <blockquote><p>Decorators 是ES7中添加的JavaScript新特性</p></blockquote> <blockquote><p>装饰器接收一个参数，也就是我们被装饰的目标方法，处理完扩展的内容后再返回一个方法，供以后调用，同时也失去了对原方法对象的访问。
+装饰器和被装饰者之间通过 @ 符进行连接。
+在JavaScript层面我们已经感性的认识了装饰器，我们的代码装饰的是一个函数。在JavaScript中，一共有4类装饰器：</p></blockquote> <blockquote><ul><li>Method Decorator  函数装饰器</li> <li>Property Decorators 熟悉装饰器</li> <li>Class Decorator 类装饰器</li> <li>Parameter Decorator 参数装饰器</li></ul></blockquote> <h2 id="函数装饰器"><a href="#函数装饰器" aria-hidden="true" class="header-anchor">#</a> 函数装饰器</h2> <blockquote><blockquote><p>通过使用 函数装饰器，我们可以控制函数的输入和输出。</p></blockquote></blockquote> <blockquote><blockquote><p>下面是函数装饰器的定义：</p></blockquote></blockquote> <div class="language- extra-class"><pre class="language-text"><code>MethodDecorator = &lt;T&gt;(target: Object, key: string, descriptor: TypedPropertyDescriptor&lt;T&gt;) =&gt; TypedPropertyDescriptor&lt;T&gt; | Void;
+target -&gt; 被装饰的对象
+key -&gt; 被装饰的函数名
+descriptor -&gt; 被传递过来的属性的属性描述符. 可以通过 Object.getOwnPropertyDescriptor()方法来查看属性描述符。
+</code></pre></div><blockquote><p>Object.getOwnPropertyDescriptor()获取每个属性的描述符并打印出来。下面我们对value , enumerable , configurable 和 writable 做简要的说明。</p></blockquote> <blockquote><ul><li>value – &gt;字面值或者函数/属性计算后的返回值。</li> <li>enumerable -&gt; 是否可以被枚举 (是否可以在 (for x in obj)循环中被枚举出来)</li> <li>configurable – &gt;属性是否可以被配置</li> <li>writable -&gt; 属性是否是可写的.</li></ul></blockquote> <blockquote><p>每个属性或者方法都有自己的一个描述符，通过描述符我们可以修改属性的行为或者返回值。下面关键来了：
+<strong>装饰器的本质就是修改描述符</strong></p></blockquote> <h2 id="方法装饰器实例"><a href="#方法装饰器实例" aria-hidden="true" class="header-anchor">#</a> 方法装饰器实例</h2> <blockquote><p>下面我们通过方法装饰器来修改一个函数的输入和输出</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>function leDecorator(target, propertyKey: string, descriptor: PropertyDescriptor): any {
+    var oldValue = descriptor.value;
+
+    descriptor.value = function() {
+      console.log(`Calling &quot;${propertyKey}&quot; with`, arguments,target);
+      // Executing the original function interchanging the arguments
+      let value = oldValue.apply(null, [arguments[1], arguments[0]]);
+      //returning a modified value
+      return value + &quot;; This is awesome&quot;;
+    };
+
+    return descriptor;
+  }
+
+  class JSMeetup {
+    speaker = &quot;Ruban&quot;;
+    //@leDecorator
+    welcome(arg1, arg2) {
+      console.log(`Arguments Received are ${arg1}, ${arg2}`);
+      return `${arg1} ${arg2}`;
+    }
+  }
+
+  const meetup = new JSMeetup();
+
+  console.log(meetup.welcome(&quot;World&quot;, &quot;Hello&quot;));
+</code></pre></div><blockquote><p>在不使用装饰器的时候，输出值为：</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>Arguments Received are World, Hello
+World Hello
+</code></pre></div><blockquote><p>启用装饰器后，输出值为：</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>Calling &quot;welcome&quot; with { '0': 'World', '1': 'Hello' } JSMeetup {}
+Arguments Received are Hello, World
+Hello World; This is awesome
+</code></pre></div><blockquote><p>在新的函数中首先调用了原函数，获得了返回值，然后修改了返回值。 最后return descriptor，新的descriptor会被应用到welcome方法上，此时整合函数体已经被替换了。
+通过使用装饰器，我们实现了对原函数的包装，可以修改方法的输入和输出，这意味着我们可以应用各种想要的魔法效果到目标方法上。</p></blockquote> <blockquote><p>这里有几点需要注意的地方：</p></blockquote> <blockquote><ul><li>装饰器在class被声明的时候被执行，而不是class实例化的时候。</li> <li>方法装饰器返回一个值</li> <li>存储原有的描述符并且返回一个新的描述符是我们推荐的做法. 这在多描述符应用的场景下非常有用。</li> <li>设置描述符的value的时候，不要使用箭头函数。</li></ul></blockquote> <h2 id="属性装饰器"><a href="#属性装饰器" aria-hidden="true" class="header-anchor">#</a> 属性装饰器</h2> <blockquote><p>属性装饰器和方法装饰器很类似，通过属性装饰器，我们可以用来重新定义getters、setters，修改enumerable, configurable等属性。
+属性装饰器定义如下：</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>PropertyDecorator = (target: Object, key: string) =&gt; void;
+
+target：属性拥有者
+key：属性名
+</code></pre></div><blockquote><p>Object.defineProperty方法通常用来动态给一个对象添加或者修改属性。下面是一段示例：</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>var o = { get foo() { return 17; }, bar:17, foobar:function(){return &quot;FooBar&quot;} };
+
+Object.defineProperty(o, 'myProperty', {
+get: function () {
+return this['myProperty'];
+},
+set: function (val) {
+this['myProperty'] = val;
+},
+enumerable:true,
+configurable:true
+});
+</code></pre></div><blockquote><p>从结果中，我们看到，利用Object.defineProperty，我们动态添给对象添加了属性。下面我们基于Object.defineProperty来实现一个简单的属性装饰器。</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>function realName(target, key: string): any {
+    // property value
+    var _val = target[key];
+
+    // property getter
+    var getter = function () {
+      return &quot;Ragularuban(&quot; + _val + &quot;)&quot;;
+    };
+
+    // property setter
+    var setter = function (newVal) {
+      _val = newVal;
+    };
+
+    // Create new property with getter and setter
+    Object.defineProperty(target, key, {
+      get: getter,
+      set: setter
+    });
+  }
+
+  class JSMeetup {
+    //@realName
+    public myName = &quot;Ruban&quot;;
+    constructor() {
+    }
+    greet() {
+      return &quot;Hi, I'm &quot; + this.myName;
+    }
+  }
+
+  const meetup = new JSMeetup();
+  console.log(meetup.greet());
+  meetup.myName = &quot;Ragul&quot;;
+  console.log(meetup.greet());
+</code></pre></div><h2 id="class-装饰器"><a href="#class-装饰器" aria-hidden="true" class="header-anchor">#</a> Class 装饰器</h2> <blockquote><p>Class装饰器是通过操作Class的构造函数，来实现对Class的相关属性和方法的动态添加和修改。
+下面是Class装饰器的定义：</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>ClassDecorator = &lt;TFunction extends Function&gt;(target: TFunction) =&gt; TFunction;
+</code></pre></div><blockquote><p>ClassDecorator只接收一个参数，就是Class的构造函数。下面的示例代码，修改了类原有的属性speaker，并动态添加了一个属性extra。</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>function AwesomeMeetup&lt;T extends { new (...args: any[]): {} }&gt;(constructor: T) {
+    return class extends constructor implements extra {
+      speaker: string = &quot;Ragularuban&quot;;
+      extra = &quot;Tadah!&quot;;
+    }
+  }
+
+  //@AwesomeMeetup
+  class JSMeetup {
+    public speaker = &quot;Ruban&quot;;
+    constructor() {
+    }
+    greet() {
+      return &quot;Hi, I'm &quot; + this.speaker;
+    }
+  }
+
+  interface extra {
+    extra: string;
+  }
+
+  const meetup = new JSMeetup() as JSMeetup &amp; extra;
+  console.log(meetup.greet());
+  console.log(meetup.extra);
+
+I m Ruban
+undefined
+
+I m Ragularban
+Tadah!
+</code></pre></div><blockquote><p>这里需要注意的是，<strong>构造函数只会被调用一次</strong></p></blockquote> <h2 id="参数装饰器"><a href="#参数装饰器" aria-hidden="true" class="header-anchor">#</a> 参数装饰器</h2> <blockquote><p>如果通过上面讲过的装饰器来推论参数装饰器的作用，可能会是修改参数，但事实上并非如此。参数装饰器往往用来对特殊的参数进行标记，然后在方法装饰器中读取对应的标记，执行进一步的操作。例如：</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>function logParameter(target: any, key: string, index: number) {
+    var metadataKey = `myMetaData`;
+    if (Array.isArray(target[metadataKey])) {
+      target[metadataKey].push(index);
+    }
+    else {
+      target[metadataKey] = [index];
+    }
+  }
+
+  function logMethod(target, key: string, descriptor: any): any {
+    var originalMethod = descriptor.value;
+    descriptor.value = function (...args: any[]) {
+
+      var metadataKey = `myMetaData`;
+      var indices = target[metadataKey];
+      console.log('indices', indices);
+      for (var i = 0; i &lt; args.length; i++) {
+
+        if (indices.indexOf(i) !== -1) {
+          console.log(&quot;Found a marked parameter at index&quot; + i);
+          args[i] = &quot;Abrakadabra&quot;;
+        }
+      }
+      var result = originalMethod.apply(this, args);
+      return result;
+
+    }
+    return descriptor;
+  }
+
+  class JSMeetup {
+    //@logMethod
+    public saySomething(something: string, @logParameter somethingElse: string): string {
+      return something + &quot; : &quot; + somethingElse;
+    }
+  }
+
+  let meetup = new JSMeetup();
+
+  console.log(meetup.saySomething(&quot;something&quot;, &quot;Something Else&quot;));
+
+
+</code></pre></div><h2 id="小结"><a href="#小结" aria-hidden="true" class="header-anchor">#</a> 小结</h2> <blockquote><p>现在我们已经学习了所有装饰器的使用，下面总结一下关键用法：</p></blockquote> <blockquote><p>方法装饰器的核心是 方法描述符</p></blockquote> <blockquote><blockquote><p>Object.getOwnPropertyDescriptor() 方法返回指定对象上一个自有属性对应的属性描述符。（自有属性指的是直接赋予该对象的属性，不需要从原型链上进行查找的属性）</p></blockquote></blockquote> <blockquote><p>属性装饰器的核心是 Object.defineProperty</p></blockquote> <blockquote><p>Class装饰器的核心是 构造函数</p></blockquote> <blockquote><p>参数装饰器的主要作用是标记，要结合方法装饰器来使用</p></blockquote> <blockquote><p>https://juejin.im/post/5ac85f1d6fb9a028bf0590ee#heading-0</p></blockquote></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">有志者，事竞成；苦心人，天不负: </span> <span class="time">10/28/2019, 11:25:02 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/js/defineProperty.html" class="prev">
+          Object属性系列
+        </a></span> <span class="next"><a href="/js/Decorator2.html">
+          Decorator 应用
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.6ba358d5.js" defer></script><script src="/assets/js/2.ae98e73b.js" defer></script><script src="/assets/js/20.58544cb3.js" defer></script>
+  </body>
+</html>

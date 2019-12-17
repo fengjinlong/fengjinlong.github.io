@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>基础语法 | 个人博客</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.d9af7a00.css" as="style"><link rel="preload" href="/assets/js/app.6ba358d5.js" as="script"><link rel="preload" href="/assets/js/2.ae98e73b.js" as="script"><link rel="preload" href="/assets/js/39.ed80ae84.js" as="script"><link rel="prefetch" href="/assets/js/10.42ff595e.js"><link rel="prefetch" href="/assets/js/11.4ed22736.js"><link rel="prefetch" href="/assets/js/12.6a6a3966.js"><link rel="prefetch" href="/assets/js/13.2dc17c00.js"><link rel="prefetch" href="/assets/js/14.ecd84e84.js"><link rel="prefetch" href="/assets/js/15.8e63941b.js"><link rel="prefetch" href="/assets/js/16.20bbf036.js"><link rel="prefetch" href="/assets/js/17.cee65893.js"><link rel="prefetch" href="/assets/js/18.210997b6.js"><link rel="prefetch" href="/assets/js/19.6a9e1c28.js"><link rel="prefetch" href="/assets/js/20.58544cb3.js"><link rel="prefetch" href="/assets/js/21.13c2449f.js"><link rel="prefetch" href="/assets/js/22.b999c181.js"><link rel="prefetch" href="/assets/js/23.ba0e1341.js"><link rel="prefetch" href="/assets/js/24.4d053282.js"><link rel="prefetch" href="/assets/js/25.afea9c0f.js"><link rel="prefetch" href="/assets/js/26.eebee834.js"><link rel="prefetch" href="/assets/js/27.b5e919f8.js"><link rel="prefetch" href="/assets/js/28.eb2b8d47.js"><link rel="prefetch" href="/assets/js/29.39ddf55c.js"><link rel="prefetch" href="/assets/js/3.01798808.js"><link rel="prefetch" href="/assets/js/30.6d0c38c0.js"><link rel="prefetch" href="/assets/js/31.ae50bd7b.js"><link rel="prefetch" href="/assets/js/32.8f993527.js"><link rel="prefetch" href="/assets/js/33.e7076b44.js"><link rel="prefetch" href="/assets/js/34.02650f79.js"><link rel="prefetch" href="/assets/js/35.78660043.js"><link rel="prefetch" href="/assets/js/36.5720a95b.js"><link rel="prefetch" href="/assets/js/37.61ee918b.js"><link rel="prefetch" href="/assets/js/38.dfa679d1.js"><link rel="prefetch" href="/assets/js/4.086bf268.js"><link rel="prefetch" href="/assets/js/40.984dfb70.js"><link rel="prefetch" href="/assets/js/41.39b0efef.js"><link rel="prefetch" href="/assets/js/42.348c0630.js"><link rel="prefetch" href="/assets/js/43.af859649.js"><link rel="prefetch" href="/assets/js/44.231224a1.js"><link rel="prefetch" href="/assets/js/45.58ade8a2.js"><link rel="prefetch" href="/assets/js/46.87a325ea.js"><link rel="prefetch" href="/assets/js/47.639c4fd3.js"><link rel="prefetch" href="/assets/js/48.17b33593.js"><link rel="prefetch" href="/assets/js/49.f5dc4f70.js"><link rel="prefetch" href="/assets/js/5.33e71d3e.js"><link rel="prefetch" href="/assets/js/50.e91de543.js"><link rel="prefetch" href="/assets/js/51.8e808c23.js"><link rel="prefetch" href="/assets/js/52.210b18bf.js"><link rel="prefetch" href="/assets/js/53.51bb9c18.js"><link rel="prefetch" href="/assets/js/54.cc3b4480.js"><link rel="prefetch" href="/assets/js/55.d360f572.js"><link rel="prefetch" href="/assets/js/56.2a89706d.js"><link rel="prefetch" href="/assets/js/6.45b5ea40.js"><link rel="prefetch" href="/assets/js/7.227a1975.js"><link rel="prefetch" href="/assets/js/8.9cffc684.js"><link rel="prefetch" href="/assets/js/9.62b6f021.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d9af7a00.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">个人博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">vue</a></div><div class="nav-item"><a href="/" class="nav-link">css</a></div><div class="nav-item"><a href="/" class="nav-link">js</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">github</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/fengjinlong" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  1
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/fengjinlong" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  2
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">vue</a></div><div class="nav-item"><a href="/" class="nav-link">css</a></div><div class="nav-item"><a href="/" class="nav-link">js</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">github</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/fengjinlong" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  1
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/fengjinlong" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  2
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JavaScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTML</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>linux</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>http</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>docker</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>性能</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>yarn</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>php</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/php/php.html" class="active sidebar-link">php相关</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/php/php.html#基础语法" class="sidebar-link">基础语法</a></li><li class="sidebar-sub-header"><a href="/php/php.html#变量" class="sidebar-link">变量</a></li><li class="sidebar-sub-header"><a href="/php/php.html#小结" class="sidebar-link">小结</a></li><li class="sidebar-sub-header"><a href="/php/php.html#mysql" class="sidebar-link">mysql</a></li><li class="sidebar-sub-header"><a href="/php/php.html#sql筛选" class="sidebar-link">SQL筛选</a></li><li class="sidebar-sub-header"><a href="/php/php.html#oop" class="sidebar-link">OOP</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>node</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>gulp</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>typescript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>webpack</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>mac</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>react</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>interview</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>functional</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>手写代码</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>git</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JSON</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>优化</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>博文</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="基础语法"><a href="#基础语法" aria-hidden="true" class="header-anchor">#</a> 基础语法</h2> <ol><li>PHP 脚本以 &lt;?php 开始，以 ?&gt; 结束</li> <li>PHP 文件的默认文件扩展名是 &quot;.php&quot;</li> <li>PHP 文件通常包含 HTML 标签和一些 PHP 脚本代码</li> <li>PHP 中的每个代码行都必须以分号结束，否则输出错误</li></ol> <h2 id="变量"><a href="#变量" aria-hidden="true" class="header-anchor">#</a> 变量</h2> <ol><li>变量以 $ 符号开始，后面跟着变量的名称,$a</li> <li>变量名必须以字母或者下划线字符开始</li> <li>变量名只能包含字母数字字符以及下划线（A-z、0-9 和 _ ）</li> <li>变量名不能包含空格</li> <li>变量名是区分大小写的（$y 和 $Y 是两个不同的变量）</li> <li>由于PHP是弱类型语言所以变量不必声明类型和JS类似</li></ol> <h3 id="四种不同的变量作用域"><a href="#四种不同的变量作用域" aria-hidden="true" class="header-anchor">#</a> 四种不同的变量作用域</h3> <div class="language- extra-class"><pre class="language-text"><code>local 局部
+global 全局
+static 局部-静态变量
+parameter 参数
+
+&lt;?php 
+  $age = 20; //全局作用域
+  $name = 'zhangsan';
+  function people () {
+    $isJob  = 'yes'; //局部变量
+    global $name;   //访问全局作用域
+    var_dump($name);  // zhangsan 
+  }
+  people()
+?&gt;
+
+1. $age 是在函数外部定义的变量，拥有全局作用域，但是这里和 JS 的区别是 $age 在people函数中是不可访问的
+2. $isJob 是在函数内部声明的变量所以是局部变量，只能在函数内部访问
+3. $name global 是在函数内部调用函数外部定义的全局变量,正常情况在函数内部访问函数外部的变量则为NULL
+</code></pre></div><h3 id="static-作用域"><a href="#static-作用域" aria-hidden="true" class="header-anchor">#</a> Static 作用域</h3> <div class="language- extra-class"><pre class="language-text"><code>&lt;?php
+  function test() {
+    static $a = 0;
+    // static $a = 1 + 2; // 解析错误 参照解析2
+    echo $a;
+    $a++;
+  }
+  test (); //0
+  test (); //1
+  test (); //2
+?&gt;
+解析：
+
+1. 静态全局变量的作用域局限于一个源文件内，只能为该源文件内的函数公用
+2. 不能对静态变量用表达式的结果赋值，否则会导致解析错误
+3. static全局变量只初使化一次，下一次依据上一次结果值，上例子中调用三次执行的结果是累加的。
+4. 在内存的静态存储区中（静态存储区在整个程序运行期间都存在，其他局部变量存储在栈中。
+</code></pre></div><h2 id="小结"><a href="#小结" aria-hidden="true" class="header-anchor">#</a> 小结</h2> <blockquote><ul><li>定义在函数外部的就是全局变量，它的作用域从定义处一直到文件结尾。</li> <li>函数内定义的变量就是局部变量，它的作用域为函数定义范围内。</li> <li>函数内访问全局变量需要 global 关键字,如果不使用，则会覆盖全局变量</li></ul></blockquote> <h3 id="数组内置函数"><a href="#数组内置函数" aria-hidden="true" class="header-anchor">#</a> 数组内置函数</h3> <blockquote><ul><li>for、foreach循环输出数组元素</li></ul></blockquote> <div class="language- extra-class"><pre class="language-text"><code>&lt;?php 
+  // for循环
+  for ($i = 0; $i &lt;= 100; $i++) {
+    echo &quot;$i &lt;br/&gt;&quot;;
+  } 
+
+  // foreach 只适用于数组
+  $name = array('zhangsan', 'lisi', 'wangwu');  // 创建数组
+  foreach ($name as $value) {
+    echo &quot;$value &lt;br/&gt;&quot;;
+  }
+?&gt;
+</code></pre></div><blockquote><ul><li>count() 获取数组元素的个数</li></ul></blockquote> <div class="language- extra-class"><pre class="language-text"><code>&lt;?php
+  $nameLength = array('zhangsan', 'lisi', 'wangwu');
+  echo count($nameLength); // 3
+?&gt;
+</code></pre></div><blockquote><ul><li>输出数组当前的元素的值，如果当前元素为空或者无值则返回FALSE</li></ul></blockquote> <div class="language- extra-class"><pre class="language-text"><code>&lt;?php
+  $name = array('zhangsan', 'lisi', 'wangwu');
+
+  echo current($name); // 返回第一个元素zhangsan 
+
+  echo end($name); // 返回最后一个元素wangwu
+
+  echo next($name); // 返回指定元素的下一个元素
+
+  echo prev($name); // 返回指定元素的上一个元素
+
+  echo reset($name); // 把内部指针移动到数组的首个元素zhangsan
+
+?&gt;
+</code></pre></div><blockquote><ul><li>对当前数组进行排序</li></ul></blockquote> <div class="language- extra-class"><pre class="language-text"><code>  $numbers = array(1, 2, 3, 3, 4, 5, 6, 2);
+
+  // 返回bool
+  sort($numbers);  //对数组进行升序成功则为true 失败则为false
+  rsort($numbers); //对数组进行降序成功则为true 失败则为false
+  array_reverse($array, $preserve); //对原数组按反序排序，返回排序后的数组(2, 6, 5, 4, 3, 3, 2, 1)
+</code></pre></div><blockquote><ul><li>合并数组</li></ul></blockquote> <div class="language- extra-class"><pre class="language-text"><code>$arr = array(1, 2, 3, 3, 4, 5, 6, 2);
+$arr1 = array(10, 20, 30);
+
+array_merge($arr, $arr1 );
+</code></pre></div><blockquote><ul><li>压栈，出栈</li></ul></blockquote> <div class="language- extra-class"><pre class="language-text"><code>$name = 'wang';
+$name1  = array('zhang', 'li');
+
+array_push($name1, $name); // 3 返回新数组的长度
+
+array_pop($name1); //li 返回被pop的值。栈为空，返回null
+
+array_shift($name1); //删除第一个元素并返回；
+
+array_unshift(array，val1，val2,...); //将参数按照顺序加入队列中
+</code></pre></div><blockquote><ul><li>统计数组中值为出现的次数</li></ul></blockquote> <div class="language- extra-class"><pre class="language-text"><code>$val = array(1, 2, 3, 3, 4, 3, 3, 1, 1);
+print_r(array_count_values($val));
+</code></pre></div><blockquote><ul><li>过滤数组的元素</li></ul></blockquote> <div class="language- extra-class"><pre class="language-text"><code>function func ($var) {
+  return($var &amp; 1);
+}
+
+$val = array('a', 'b', 2, 3, 4);
+print_r(array_filter($val, 'func')); // 3
+</code></pre></div><blockquote><ul><li>检查索引是否在数组中</li></ul></blockquote> <div class="language- extra-class"><pre class="language-text"><code>$people = array('name'=&gt;'renbo', 'age'=&gt;'28');
+
+if (array_key_exists('name', $people)) {
+  echo 'name存在';
+}```
+&gt;+ 检查数组中是否存在指定的值
+</code></pre></div><p>$val = array('zhangsan', 'lisi', 'wangwu');
+if (in_array('zhangsan', $val)) {
+echo '存在';
+}```</p> <blockquote><ul><li>返回当前元素的Key</li></ul></blockquote> <div class="language- extra-class"><pre class="language-text"><code>$people = array('name'=&gt;'renbo', 'age'=&gt;'28');
+key($people); //name
+</code></pre></div><blockquote><ul><li>返回当前元素所有的key</li></ul></blockquote> <div class="language- extra-class"><pre class="language-text"><code>$people = array('name'=&gt;'renbo','age'=&gt;'28');
+print_r(array_keys($people)); // name age
+</code></pre></div><h2 id="mysql"><a href="#mysql" aria-hidden="true" class="header-anchor">#</a> mysql</h2> <div class="language- extra-class"><pre class="language-text"><code>注意分号
+登录
+mysql -uroot -p
+查看
+show databases;
+设定默认数据库
+use db_test;
+
+MySQL函数SQL语句
+count 
+    COUNT(column_name) 函数返回指定列的值的数目（NULL 不计入）：
+    SELECT count (*) FROM t_student
+    WHERE gender ='M'
+min()
+    MIN() 函数返回指定列的最小值。
+    SELECT min(指定列) FROM 表 //仅返回指定列数据
+    SELECT min(指定列), t_student.* FROM db_test.t_student
+max()
+    MAX() 函数返回指定列的最大值。
+sum()
+    求和
+sqrt()
+    求平方根
+now()
+    当前时间
+rand()
+    得到一个随机数//0-1之间带小数的
+concat()拼接字符串
+    concat(字段，字段)
+    SELECT concat(字段.&quot;任何字符串&quot;.字段) FROM 表；
+</code></pre></div><h2 id="sql筛选"><a href="#sql筛选" aria-hidden="true" class="header-anchor">#</a> SQL筛选</h2> <div class="language- extra-class"><pre class="language-text"><code>SELECT * FROM t_student
+WHERE birthdate &lt;='1993'
+WHERE birthdate &gt;='1991'
+
+SELECT * FROM t_student
+WHERE birthdate BETWEEN '1991' AND '1993'
+
+找姓王同学
+SELECT * FROM t_student
+WHERE name LIKE '王%' 
+% 通配符
+
+名字带王的
+SELECT * FROM t_student
+WHERE name LIKE '%王%' 
+</code></pre></div><p>'-- 'sql注释
+LIKE会降低性能</p> <div class="language- extra-class"><pre class="language-text"><code>按生日排序
+顺序
+SELECT * FROM t_student
+ORDER BY birthdate
+逆序
+SELECT * FROM t_student
+ORDER BY birthdate DESC
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>SELECT * FROM db_test.t_class
+
+将学生表与班级表关联查询
+SELECT * FROM t_student,t_class
+WHERE t_student.class_id=t_class.class_id
+筛选某些字段
+SELECT t_student.id,t_student.name,t_class.className FROM t_student,t_class
+WHERE t_student.class_id=t_class.class_id
+</code></pre></div><h2 id="oop"><a href="#oop" aria-hidden="true" class="header-anchor">#</a> OOP</h2> <h3 id="面向对象基础概念"><a href="#面向对象基础概念" aria-hidden="true" class="header-anchor">#</a> 面向对象基础概念</h3> <p>Object Oriented Programming，简称OOP，是一种程序设计思想。OOP把对象作为程序的基本单元，一个对象包含了数据和操作数据的函数</p> <h3 id="对象的主要三个特性"><a href="#对象的主要三个特性" aria-hidden="true" class="header-anchor">#</a> 对象的主要三个特性</h3> <ol><li>对象的行为：可以对 对象施加那些操作，开灯，关灯就是行为</li> <li>对象的形态：当施加那些方法是对象如何响应，颜色，尺寸，外型</li> <li>对象的表示：对象的表示就相当于身份证，具体区分在相同的行为与状态下有什么不同</li></ol> <h3 id="面向对象内容"><a href="#面向对象内容" aria-hidden="true" class="header-anchor">#</a> 面向对象内容</h3> <div class="language- extra-class"><pre class="language-text"><code>类 − 定义了一件事物的抽象特点。类的定义包含了数据的形式以及对数据的操作
+
+对象 − 是类的实例
+
+成员变量 − 定义在类内部的变量。该变量的值对外是不可见的，但是可以通过成员函数访问，在类被实例化为对象后，该变量即可称为对象的属性
+
+成员函数 − 定义在类的内部，可用于访问对象的数据
+
+继承 − 继承性是子类自动共享父类数据结构和方法的机制，这是类之间的一种关系。在定义和实现一个类的时候，可以在一个已经存在的类的基础之上来进行，把这个已经存在的类所定义的内容作为自己的内容，并加入若干新的内容
+
+父类 − 一个类被其他类继承，可将该类称为父类，或基类，或超类
+
+子类 − 一个类继承其他类称为子类，也可称为派生类
+
+多态 − 多态性是指相同的函数或方法可作用于多种类型的对象上并获得不同的结果。不同的对象，收到同一消息可以产生不同的结果，这种现象称为多态性
+
+重载 − 简单说，就是函数或者方法有同样的名称，但是参数列表不相同的情形，这样的同名不同参数的函数或者方法之间，互相称之为重载函数或者方法
+
+抽象性 − 抽象性是指将具有一致的数据结构（属性）和行为（操作）的对象抽象成类。一个类就是这样一种抽象，它反映了与应用有关的重要性质，而忽略其他一些无关内容。任何类的划分都是主观的，但必须与具体的应用有关
+
+封装 − 封装是指将现实世界中存在的某个客体的属性与行为绑定在一起，并放置在一个逻辑单元内
+
+构造函数 − 主要用来在创建对象时初始化对象， 即为对象成员变量赋初始值，总与new运算符一起使用在创建对象的语句中
+
+析构函数 − 析构函数(destructor) 与构造函数相反，当对象结束其生命周期时（例如对象所在的函数已调用完毕），系统自动执行析构函数。析构函数往往用来做&quot;清理善后&quot; 的工作（例如在建立对象时用new开辟了一片内存空间，应在退出前在析构函数中用delete释放）
+</code></pre></div><h3 id="php中类的定义"><a href="#php中类的定义" aria-hidden="true" class="header-anchor">#</a> PHP中类的定义</h3> <div class="language- extra-class"><pre class="language-text"><code> &lt;?php
+    class People {
+      // 公有成员属性
+      public $name = 'zhangsan';
+      public $age = 28;
+      // 公有成员函数方法
+      public function sayName () {
+        //业务逻辑 
+      }
+    }
+  ?&gt;
+</code></pre></div><h3 id="php中对象的创建"><a href="#php中对象的创建" aria-hidden="true" class="header-anchor">#</a> PHP中对象的创建</h3> <div class="language- extra-class"><pre class="language-text"><code>class People {
+    // 公有成员属性
+    public $name = 'zhangsan';
+    public $age = 28;
+    // 公有成员函数方法（$this代表自身的对象);
+    public function sayName () {
+      echo $this-&gt;name;
+    }
+  }
+  // 通过new操作符创建对象
+  $body = new People();
+  // 成员对象的调用
+  $body-&gt;study();
+</code></pre></div><h3 id="php-构造函数"><a href="#php-构造函数" aria-hidden="true" class="header-anchor">#</a> php 构造函数</h3> <div class="language- extra-class"><pre class="language-text"><code>class People {
+  // 通过构造方法为成员变量赋初始值
+  function __construct( $name, $age ) {
+    $this-&gt;name = $name;
+    $this-&gt;age = $age;
+  }
+  // 公有成员函数方法（$this代表自身的对象);
+  public function sayName () {
+    echo(&quot;my name is &amp;nbsp;&quot; .$this-&gt;name.&quot;,&amp;nbspI`m&amp;nbsp;&quot; .$this-&gt;age .&quot;&amp;nbsp;years old&quot;);
+    echo '&lt;/br&gt;';
+  }
+}
+// 通过new操作符创建zhangsan对象
+$zhangsan = new People('zhangsan', 28);
+$zhangsan-&gt;sayName();
+
+// 通过new操作符创建lisi对象
+$lisi = new People('lisi', 26);
+$lisi-&gt;sayName();
+</code></pre></div><h3 id="php中析构函数"><a href="#php中析构函数" aria-hidden="true" class="header-anchor">#</a> PHP中析构函数</h3> <p>析构函数 (destructor) 与构造函数相反，当对象结束其生命周期时，系统自动执行析构函数，常用场景例如连接数据库在__construct中,处理完数据断开连接在__destruct方法中</p> <div class="language- extra-class"><pre class="language-text"><code> class People {
+    // 通过构造方法为成员变量赋初始值
+    function __construct ($name, $age) {
+      $this-&gt;name = $name;
+      $this-&gt;age = $age;
+    }
+    // 公有成员函数方法（$this代表自身的对象);
+    public function sayName () {
+      echo(&quot;my name is &amp;nbsp;&quot; .$this-&gt;name.&quot;,&amp;nbspI`m&amp;nbsp;&quot; .$this-&gt;age .&quot;&amp;nbsp;years old&quot;);
+      echo '&lt;/br&gt;';
+    }
+    // 析构函数用于销毁某些变量、对象，操作等
+    function __destruct () {
+      $this-&gt;name = '';
+      return true;
+    }
+  }
+  // 通过new操作符创建lisi对象
+  $lisi = new People('lisi', 26);
+
+  var_dump($lisi);
+  echo '&lt;br/&gt;';
+
+  if ($lisi-&gt;__destruct()) {
+    echo '销毁成功 &lt;br/&gt;';
+    var_dump($lisi);
+  }
+</code></pre></div><h3 id="php中继承实现"><a href="#php中继承实现" aria-hidden="true" class="header-anchor">#</a> PHP中继承实现</h3> <div class="language- extra-class"><pre class="language-text"><code>// 父类
+class People {
+  var $name;
+  var $age;
+  function __construct ($name, $age) {
+    $this-&gt;name = $name;
+    $this-&gt;age = $age;
+  }
+  public function sayName () {
+    echo(&quot;my name is &amp;nbsp;&quot; .$this-&gt;name.&quot;,&amp;nbspI`m&amp;nbsp;&quot; .$this-&gt;age .&quot;&amp;nbsp;years old&quot;);
+    echo '&lt;/br&gt;';
+  }
+}
+// 子类
+class Boy extends People {
+
+  function getParentProperty () {
+    var_dump($this);
+  }
+
+}
+$lisi = new People('lisi', 26);
+$boy = new Boy('wangwu',28);
+$boy-&gt;getParentProperty();
+// 子类调用父类方法
+$boy-&gt;sayName();
+</code></pre></div><h3 id="php中方法重写"><a href="#php中方法重写" aria-hidden="true" class="header-anchor">#</a> PHP中方法重写</h3> <div class="language- extra-class"><pre class="language-text"><code> class People {
+  var $name;
+  var $age;
+  function __construct ($name, $age) {
+    $this-&gt;name = $name;
+    $this-&gt;age = $age;
+  }
+  public function sayName () {
+    echo(&quot;my name is &amp;nbsp;&quot; .$this-&gt;name.&quot;,&amp;nbspI`m&amp;nbsp;&quot; .$this-&gt;age .&quot;&amp;nbsp;years old&quot;);
+    echo '&lt;/br&gt;';
+  }
+}
+// 子类
+class Boy extends People {
+  // 重写父类方法
+  public function sayName () {
+    echo (&quot;my name is &amp;nbsp;&quot; .$this-&gt;name);
+    return $this-&gt;name;
+  }
+}
+$lisi = new People('lisi', 26);
+$boy = new Boy('wangwu',28);
+// 重写方法
+$boy-&gt;sayName();
+</code></pre></div><h3 id="php中访问的控制"><a href="#php中访问的控制" aria-hidden="true" class="header-anchor">#</a> PHP中访问的控制</h3> <blockquote><ul><li>PHP 对属性或方法的访问控制，是通过在前面添加关键字 public（公有），protected（受保护）或 private（私有）来实现的</li></ul></blockquote> <blockquote><ul><li>public &amp; var（公有）：公有的类成员可以在任何地方被访问</li></ul></blockquote> <blockquote><ul><li>protected（受保护）：受保护的类成员则可以被其自身以及其子类和父类访问</li></ul></blockquote> <blockquote><ul><li>private（私有）：私有的类成员则只能被其定义所在的类访问</li></ul></blockquote> <div class="language- extra-class"><pre class="language-text"><code>/**
+   * 基类
+   * Define People
+   */
+  class People 
+  {
+    // 声明一个公有的构造函数
+    public function __construct () {}
+
+    // 声明一个共有的方法
+    public function sayName () 
+    {
+      echo 'sayname&lt;/br&gt;';
+    }
+
+    // 声明一个受保护的方法
+    protected function swim () 
+    {
+      echo 'swim&lt;/br&gt;';
+    }
+
+    // 声明一个私有方法
+    private function study () 
+    {
+      echo 'study';
+    }
+    
+    // 不加关键字默认公有方法
+    function getFun () {
+      $this-&gt;sayName();
+      $this-&gt;swim();
+      $this-&gt;study();
+    }
+  }
+  $people = new People();
+  // 正常运行输出sayname
+  $people-&gt;sayName();
+  // 产生错误
+  $people-&gt;swim();
+  // 产生错误
+  $people-&gt;study();
+  // 公有，受保护，私有都可以执行
+  $people-&gt;getFun(); 
+
+  /**
+   * 子类
+   * Define Boy
+   */
+
+  class Boy extends People
+  {
+    function getFun2 ()
+    {
+      $this-&gt;sayName();
+      $this-&gt;swim();
+      // 这行会产生一个错误
+      $this-&gt;study(); 
+    }
+  }
+  $body = new Boy();
+  // 这行能被正常执行
+  $body -&gt;sayName();
+  // 公有的和受保护的都可执行，但私有的不行
+  $body-&gt;getFun2(); 
+</code></pre></div><h3 id="php中抽象类"><a href="#php中抽象类" aria-hidden="true" class="header-anchor">#</a> PHP中抽象类</h3> <blockquote><ul><li>利用关键字abstract声明抽象</li></ul></blockquote> <blockquote><ul><li>如果类中有一个方法被是声明为抽象，那么这个类也必须声明为抽象</li></ul></blockquote> <blockquote><ul><li>抽象方法只声明了调用方式（参数），不能定义其具体的功能实现（相当于没有函数体），子类通过继承实现抽象方法，且不能被实例化</li></ul></blockquote> <blockquote><ul><li>继承一个抽象类，子类必须定义父类中的所有抽象方法并且必须要和父类的声明访问级别保持一致或者更宽松</li></ul></blockquote> <div class="language- extra-class"><pre class="language-text"><code>/**
+   * 定义抽象类People
+   */
+  abstract class People 
+  {
+
+    abstract protected function eat();
+    abstract protected function sleep();
+    abstract protected function study();
+    public function runing() 
+    {
+      echo '跑啊跑！&lt;/br&gt;';
+    }
+  }
+
+  /**
+   * 实现抽象类
+   */
+  class Zhangsan extends People
+  {
+    protected function eat()
+    {
+      echo 'eat &lt;/br&gt;';
+      return 'eat';
+    }
+
+    protected function sleep()
+    {
+      echo 'sleep &lt;/br&gt;';
+      return 'sleep';
+    }
+
+    protected function study()
+    {
+      echo 'study &lt;/br&gt;';
+      return 'study';
+    }
+
+    public function getFunc () 
+    {
+      $this-&gt;eat();
+      $this-&gt;sleep();
+      $this-&gt;study();
+    }
+  }
+  // 调用子类
+  $zhangsan = new Zhangsan;
+  $zhangsan-&gt;runing(); //跑啊跑！
+  $zhangsan-&gt;getFunc(); // eat sleep study
+
+  场景：在很多类里面很多的方法都是在重复。这里就可以去用抽象类，当然也可以重写一个类，每个公共类实例化实例化一次，调用相同的方法。但是abstract可以省去实例化的步骤，而且可以重载这个方法,这样不是更方便简单嘛
+</code></pre></div><h3 id="php中接口的使用"><a href="#php中接口的使用" aria-hidden="true" class="header-anchor">#</a> PHP中接口的使用</h3> <p>interface主要对类名，类所拥有的方法，以及所传参数起约束和规范作用，和abstract类似。在多人协同开发项目时起重要作用</p> <div class="language- extra-class"><pre class="language-text"><code>// 定义接口类
+interface People  
+{
+  public eat () {};
+}
+// 实现接口类
+class Apple implements People{
+ public function eat ()
+ {
+   echo '我吃的苹果';
+ }
+}
+
+$apple = new Apple();
+$apple-&gt;eat(); 
+
+参数约束，如果参数名字不一样会报错
+
+// 定义接口类
+interface People  
+{
+  public function eat($color);
+}
+
+// 实现接口类Apple
+class Apple implements People
+{
+ public function eat($color)
+ {
+    echo(&quot;我吃的$color 🍎&lt;br/&gt;&quot;);
+ }
+}
+
+// 实现接口类Grape
+class Grape implements People
+{
+  public function eat($color)
+  {
+    echo(&quot;我吃的$color 🍇&quot;);
+  }
+}
+
+$apple = new Apple();
+$apple-&gt;eat('红'); 
+
+$grape = new Grape();
+$grape-&gt;eat('紫'); 
+接口继承
+
+  // 定义People接口类
+  interface People  
+  {  
+    public function eat();  
+  }
+
+  // 继承People接口类
+  interface Boy extends People  
+  {  
+    public function drink();  
+  }
+
+  // 接口方法实现
+  class Behavior implements Boy  
+  {  
+    public function eat()  
+    {  
+        echo &quot;吃东西&lt;br&gt;&quot;;  
+    }  
+    
+    public function drink()  
+    {  
+      echo &quot;喝饮料&lt;br&gt;&quot;;  
+    }  
+  }         
+  Behavior::eat();      
+  Behavior::drink();
+</code></pre></div><h3 id="总结抽象类和接口"><a href="#总结抽象类和接口" aria-hidden="true" class="header-anchor">#</a> 总结抽象类和接口</h3> <p>抽象类就是一个类的服务提供商，拥有众多服务</p> <p>接口类就是一个类的规范，子类必须完成它指定方法</p> <p>它们的区别：</p> <p>抽象类继承用extends,接口继承用implements</p> <p>抽象类能多重继承,接口多重继承用&quot;,&quot;隔开</p> <p>抽象类中的方法不必全部重载,接口方法必须声明或者重载</p> <p>抽象类不必只包含抽象方法,可以定义完整的方法,接口不能包含任何完整定义方法</p> <p>__set,__get,__isset,__unset,__call,__sleep(),__wakeup()等魔术方法</p> <ol><li>__sleep() 方法常用于提交未提交的数据，或类似的清理操作。同时，如果有一些很大的对象，但不需要全部保存，这个功能就很好用
+__wakeup() 经常用在反序列化操作中，例如重新建立数据库连接，或执行其它初始化操作</li></ol> <p>引入php手册中的例子</p> <p>class Connection
+{
+protected $link;
+private $server, $username, $password, $db;</p> <pre><code>  public function __construct($server, $username, $password, $db)
+  {
+      $this-&gt;server = $server;
+      $this-&gt;username = $username;
+      $this-&gt;password = $password;
+      $this-&gt;db = $db;
+      $this-&gt;connect();
+  }
+  
+  private function connect()
+  {
+      $this-&gt;link = mysql_connect($this-&gt;server, $this-&gt;username, $this-&gt;password);
+      mysql_select_db($this-&gt;db, $this-&gt;link);
+  }
+  
+  public function __sleep()
+  {
+      return array('server', 'username', 'password', 'db');
+  }
+  
+  public function __wakeup()
+  {
+      $this-&gt;connect();
+  }
+</code></pre> <p>}</p> <ol start="2"><li><p>属性重载__set,__get,__isset,__unset
+public __set ( string $name , mixed $value ) : void // 设置私有属性值的时候调用
+public __get ( string $name ) : mixed  // 获取私有属性值的时候调用
+public __isset ( string $name ) : bool // 当判断一个私有成员属性是否被设置过时调用
+public __unset ( string $name ) : void // 当销毁一个私有成员属性的时候调用
+当实例化一个对象后，调用类中不存在或者没有权限访问的属性的时候，默认调用__get()方法。可以访问内部属性</p></li> <li><p>方法重载__call和__callStatic</p></li></ol> <p>call 和 callStatic 是类似的方法，前者是调用类不存在的方法时执行，而后者是调用类不存在的静态方式方法时执行。正常情况下如果调用一个类不存在的方法 PHP 会抛出致命错误，而使用这两个魔术方法我们可以替换一些更友好的提示或者记录错误调用日志信息、将用户重定向、抛出异常等等，亦或者是如同set 和 get 那样做方法的重命名。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">有志者，事竞成；苦心人，天不负: </span> <span class="time">8/23/2019, 10:22:58 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/yarn/基础.html" class="prev">
+          基础
+        </a></span> <span class="next"><a href="/node/1.html">
+          node基础
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.6ba358d5.js" defer></script><script src="/assets/js/2.ae98e73b.js" defer></script><script src="/assets/js/39.ed80ae84.js" defer></script>
+  </body>
+</html>

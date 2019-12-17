@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>什么是函数式编程 | 个人博客</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.d9af7a00.css" as="style"><link rel="preload" href="/assets/js/app.6ba358d5.js" as="script"><link rel="preload" href="/assets/js/2.ae98e73b.js" as="script"><link rel="preload" href="/assets/js/12.6a6a3966.js" as="script"><link rel="prefetch" href="/assets/js/10.42ff595e.js"><link rel="prefetch" href="/assets/js/11.4ed22736.js"><link rel="prefetch" href="/assets/js/13.2dc17c00.js"><link rel="prefetch" href="/assets/js/14.ecd84e84.js"><link rel="prefetch" href="/assets/js/15.8e63941b.js"><link rel="prefetch" href="/assets/js/16.20bbf036.js"><link rel="prefetch" href="/assets/js/17.cee65893.js"><link rel="prefetch" href="/assets/js/18.210997b6.js"><link rel="prefetch" href="/assets/js/19.6a9e1c28.js"><link rel="prefetch" href="/assets/js/20.58544cb3.js"><link rel="prefetch" href="/assets/js/21.13c2449f.js"><link rel="prefetch" href="/assets/js/22.b999c181.js"><link rel="prefetch" href="/assets/js/23.ba0e1341.js"><link rel="prefetch" href="/assets/js/24.4d053282.js"><link rel="prefetch" href="/assets/js/25.afea9c0f.js"><link rel="prefetch" href="/assets/js/26.eebee834.js"><link rel="prefetch" href="/assets/js/27.b5e919f8.js"><link rel="prefetch" href="/assets/js/28.eb2b8d47.js"><link rel="prefetch" href="/assets/js/29.39ddf55c.js"><link rel="prefetch" href="/assets/js/3.01798808.js"><link rel="prefetch" href="/assets/js/30.6d0c38c0.js"><link rel="prefetch" href="/assets/js/31.ae50bd7b.js"><link rel="prefetch" href="/assets/js/32.8f993527.js"><link rel="prefetch" href="/assets/js/33.e7076b44.js"><link rel="prefetch" href="/assets/js/34.02650f79.js"><link rel="prefetch" href="/assets/js/35.78660043.js"><link rel="prefetch" href="/assets/js/36.5720a95b.js"><link rel="prefetch" href="/assets/js/37.61ee918b.js"><link rel="prefetch" href="/assets/js/38.dfa679d1.js"><link rel="prefetch" href="/assets/js/39.ed80ae84.js"><link rel="prefetch" href="/assets/js/4.086bf268.js"><link rel="prefetch" href="/assets/js/40.984dfb70.js"><link rel="prefetch" href="/assets/js/41.39b0efef.js"><link rel="prefetch" href="/assets/js/42.348c0630.js"><link rel="prefetch" href="/assets/js/43.af859649.js"><link rel="prefetch" href="/assets/js/44.231224a1.js"><link rel="prefetch" href="/assets/js/45.58ade8a2.js"><link rel="prefetch" href="/assets/js/46.87a325ea.js"><link rel="prefetch" href="/assets/js/47.639c4fd3.js"><link rel="prefetch" href="/assets/js/48.17b33593.js"><link rel="prefetch" href="/assets/js/49.f5dc4f70.js"><link rel="prefetch" href="/assets/js/5.33e71d3e.js"><link rel="prefetch" href="/assets/js/50.e91de543.js"><link rel="prefetch" href="/assets/js/51.8e808c23.js"><link rel="prefetch" href="/assets/js/52.210b18bf.js"><link rel="prefetch" href="/assets/js/53.51bb9c18.js"><link rel="prefetch" href="/assets/js/54.cc3b4480.js"><link rel="prefetch" href="/assets/js/55.d360f572.js"><link rel="prefetch" href="/assets/js/56.2a89706d.js"><link rel="prefetch" href="/assets/js/6.45b5ea40.js"><link rel="prefetch" href="/assets/js/7.227a1975.js"><link rel="prefetch" href="/assets/js/8.9cffc684.js"><link rel="prefetch" href="/assets/js/9.62b6f021.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d9af7a00.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">个人博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">vue</a></div><div class="nav-item"><a href="/" class="nav-link">css</a></div><div class="nav-item"><a href="/" class="nav-link">js</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">github</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/fengjinlong" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  1
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/fengjinlong" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  2
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">vue</a></div><div class="nav-item"><a href="/" class="nav-link">css</a></div><div class="nav-item"><a href="/" class="nav-link">js</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">github</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/fengjinlong" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  1
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/fengjinlong" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  2
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JavaScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTML</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>linux</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>http</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>docker</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>性能</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>yarn</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>php</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>node</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>gulp</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>typescript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>webpack</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>mac</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>react</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>interview</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>functional</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/functional/base.html" class="active sidebar-link">函子</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/functional/base.html#什么是函数式编程" class="sidebar-link">什么是函数式编程</a></li><li class="sidebar-sub-header"><a href="/functional/base.html#为什么学习函数式编程" class="sidebar-link">为什么学习函数式编程</a></li><li class="sidebar-sub-header"><a href="/functional/base.html#函数式编程特点" class="sidebar-link">函数式编程特点</a></li><li class="sidebar-sub-header"><a href="/functional/base.html#函数式编程的优点" class="sidebar-link">函数式编程的优点</a></li><li class="sidebar-sub-header"><a href="/functional/base.html#函数式编程-纯函数" class="sidebar-link">函数式编程-纯函数</a></li><li class="sidebar-sub-header"><a href="/functional/base.html#函数可以用于以下目的" class="sidebar-link">函数可以用于以下目的</a></li><li class="sidebar-sub-header"><a href="/functional/base.html#函数式编程-纯函数-2" class="sidebar-link">函数式编程-纯函数</a></li><li class="sidebar-sub-header"><a href="/functional/base.html#纯函数的优点" class="sidebar-link">纯函数的优点</a></li><li class="sidebar-sub-header"><a href="/functional/base.html#函数式编程-幂等性" class="sidebar-link">函数式编程-幂等性</a></li><li class="sidebar-sub-header"><a href="/functional/base.html#纯函数和幂等性的区别" class="sidebar-link">纯函数和幂等性的区别</a></li><li class="sidebar-sub-header"><a href="/functional/base.html#偏应用函数简称偏函数，在模拟-bind-的时候已经说明其概念和作为主要-bind-的实现" class="sidebar-link">偏应用函数简称偏函数，在模拟 bind 的时候已经说明其概念和作为主要 bind 的实现</a></li><li class="sidebar-sub-header"><a href="/functional/base.html#为什么要柯里化" class="sidebar-link">为什么要柯里化</a></li><li class="sidebar-sub-header"><a href="/functional/base.html#函数式编程-函数组合" class="sidebar-link">函数式编程-函数组合</a></li><li class="sidebar-sub-header"><a href="/functional/base.html#函数式编程-point-free" class="sidebar-link">函数式编程-Point Free</a></li><li class="sidebar-sub-header"><a href="/functional/base.html#函子" class="sidebar-link">函子</a></li><li class="sidebar-sub-header"><a href="/functional/base.html#应用" class="sidebar-link">应用</a></li></ul></li><li><a href="/functional/博文.html" class="sidebar-link">相关博文</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>手写代码</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>git</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JSON</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>优化</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>博文</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="什么是函数式编程"><a href="#什么是函数式编程" aria-hidden="true" class="header-anchor">#</a> 什么是函数式编程</h2> <blockquote><ul><li>函数式编程主要是范畴论数学中的一个分支，它认为所有的概念体系都可以抽象成一个个范畴，属于结构化编程的一种。运算过程尽量写成一系列嵌套的函数调用</li></ul></blockquote> <div class="language- extra-class"><pre class="language-text"><code>//  函数式编程
+var result = subtract(multiply(add(1,2), 3), 4);
+
+// 过程编程
+var a = add(1,2);
+var b = multiply(a, 3);
+var c = subtract(b, 4);
+</code></pre></div><h2 id="为什么学习函数式编程"><a href="#为什么学习函数式编程" aria-hidden="true" class="header-anchor">#</a> 为什么学习函数式编程</h2> <blockquote><ul><li>其实个人觉的学习函数式编程就是为了更好的模块化，使其看起来更简洁。这也是范式编程和结构化编程的主要思想</li></ul></blockquote> <h2 id="函数式编程特点"><a href="#函数式编程特点" aria-hidden="true" class="header-anchor">#</a> 函数式编程特点</h2> <blockquote><ul><li>函数是&quot;第一等公民&quot;</li> <li>只用表达式，不用语句</li> <li>没有副作用（函数要保持独立，所有功能就是返回一个新的值，没有其他行为，更不能修改外部状态的值）</li> <li>不修改状态（可以使用参数来保存状态，不可以使用变量来保存状态）</li> <li>引用透明（函数运行只靠参数）</li></ul></blockquote> <h2 id="函数式编程的优点"><a href="#函数式编程的优点" aria-hidden="true" class="header-anchor">#</a> 函数式编程的优点</h2> <blockquote><ul><li>代码更简洁，易于理解，维护更方便</li> <li>易于并发编程（由于不修改变量所以不存在锁线程的问题）</li> <li>代码的热升级</li></ul></blockquote> <h2 id="函数式编程-纯函数"><a href="#函数式编程-纯函数" aria-hidden="true" class="header-anchor">#</a> 函数式编程-纯函数</h2> <blockquote><ul><li>说纯函数概念之前我们再来复习一下什么是函数</li> <li>函数是一个方法，有一些输入，称为变量，并产生一些输出称为返回值</li></ul></blockquote> <h2 id="函数可以用于以下目的"><a href="#函数可以用于以下目的" aria-hidden="true" class="header-anchor">#</a> 函数可以用于以下目的</h2> <blockquote><ul><li>映射：根据给定的输入生成一些输出，函数将输入值映射到输出值上</li> <li>过程：调用函数按照一系列的步骤来执行。这就是我们说的过程编程</li> <li>I/O：与系统其他部分通信的功能。如存储系统日志，网络等</li> <li>纯函数都是关于映射的所以对于相同的输入，永远会得到相同的输出，而且没有任何可观察的副作用，也不依赖外部环境的状态。</li></ul></blockquote> <div class="language- extra-class"><pre class="language-text"><code>// 纯函数
+const double = x =&gt; x * 2;
+console.log（double（5））
+
+// 不纯
+let val = 2;
+const double = x =&gt; x * val;
+console.log（double（5））
+
+// 不纯
+Math.random()
+Math.random()
+</code></pre></div><h2 id="函数式编程-纯函数-2"><a href="#函数式编程-纯函数-2" aria-hidden="true" class="header-anchor">#</a> 函数式编程-纯函数</h2> <h2 id="纯函数的优点"><a href="#纯函数的优点" aria-hidden="true" class="header-anchor">#</a> 纯函数的优点</h2> <blockquote><ul><li>独立于外部状态，所以不会受外部全局环境的影响而产生的错误或者副作用</li> <li>由于其独立，所以易于重构和重组和重用，使程序更加灵活</li></ul></blockquote> <h2 id="函数式编程-幂等性"><a href="#函数式编程-幂等性" aria-hidden="true" class="header-anchor">#</a> 函数式编程-幂等性</h2> <blockquote><ul><li>执行多次所产生的影响均与一次执行的影响相同，也就是说执行一次和执行多次对系统内部的状态影响是一样的</li></ul></blockquote> <div class="language- extra-class"><pre class="language-text"><code>class Person {
+  constructor () {
+    this.name = name;
+  },
+  sayName () {
+    console.log(my name is + this.name);
+  } 
+}
+var person = new Person(zhangsan)
+person.sayName();
+person.sayName();
+</code></pre></div><h2 id="纯函数和幂等性的区别"><a href="#纯函数和幂等性的区别" aria-hidden="true" class="header-anchor">#</a> 纯函数和幂等性的区别</h2> <blockquote><ul><li>法调用多次对内部的状态影响是一样的，则这么方法就具有幂等性，在函数式编程中，纯函数也具有幂等性，但具有幂等性的函数却不一定是纯函数。</li> <li>纯函数主要强调相同的输入，多次调用，输出也相同且无副作用，而幂等主要强调多次调用，对内部的状态的影响是一样的，调用返回值可能不同。函数式编程-偏应用函数、函数的柯里化</li></ul></blockquote> <h2 id="偏应用函数简称偏函数，在模拟-bind-的时候已经说明其概念和作为主要-bind-的实现"><a href="#偏应用函数简称偏函数，在模拟-bind-的时候已经说明其概念和作为主要-bind-的实现" aria-hidden="true" class="header-anchor">#</a> 偏应用函数简称偏函数，在模拟 bind 的时候已经说明其概念和作为主要 bind 的实现</h2> <blockquote><ul><li>函数柯里化主要是通过偏应用函数的实现，把接受多个参数的函数变换成接受一个单一参数的函数，并且返回接受余下的参数而且返回结果的新函数</li></ul></blockquote> <div class="language- extra-class"><pre class="language-text"><code>// 柯里化之前
+function add (a, b) {
+  return a + b;
+}
+
+// 柯里化之后
+function add (a) {
+  return function (b) {
+    return a+b
+  }
+}
+
+// 等同于
+const add = a =&gt; b =&gt; a + b;
+const result = add(2)(3); // =&gt; 5
+首先函数接受 a 参数 然后返回一个新的匿名函数体确定了新的词法作用域,在该词法作用域中也拥有 a 参数
+该匿名函数调用传入参数 3 返回 a+b 的和
+通过上面程序了解到柯里化函数的特点是总是返回一个一元的函数：一个带有一个参数的新函数，不同的是普通函数可以根据需要一次获取尽可能多的参数
+
+</code></pre></div><h2 id="为什么要柯里化"><a href="#为什么要柯里化" aria-hidden="true" class="header-anchor">#</a> 为什么要柯里化</h2> <blockquote><ul><li>柯里化在函数组合的上下文中起到关键的作用,能够让你重新组合你的应用，将复杂的功能拆分成一个个简单的部分，这样容易更改，理解</li> <li>柯里化也是一种函数预加载的方法，通过传递较少的参数得到一个在相同词法作用域当中缓存了这些参数的新函数，其实这也是一种对参数的缓存</li> <li>如何柯里化</li></ul></blockquote> <div class="language- extra-class"><pre class="language-text"><code>// 普通
+const sayName = name =&gt; age =&gt; `my name is ${name}, Im years old ${age}` ;
+let name = sayName('zhangsan');
+let age = name(27);
+
+// 利用bind
+
+function person (name, age, height) {
+  console.log(`my name is ${name}, I,m years old ${age}, my height is ${height} meters`)
+}
+let info = person.bind(null, 'zhangsan');
+console.log(info(27, 175));
+柯里化函数的应用场景
+延迟计算
+参数复用
+动态创建函数
+延迟计算
+
+
+// 普通实现
+var sum = function(args){
+  return args.reduce(function(a,b){
+      return a+b
+  });
+};
+var result = sum([1,2,3,4,5]); // 15
+
+// 柯里化实现
+function add() {
+  var _args = [].slice.call(arguments);
+  var adder = function () {
+
+      // 利用闭包特性保存_args的值
+      var _adder = function() {
+          [].push.apply(_args, [].slice.call(arguments));
+          return _adder;
+      };
+
+      // 利用隐式转换的特性，计算最终的值返回
+      _adder.toString = function () {
+          return _args.reduce(function (a, b) {
+              return a + b;
+          });
+      }
+
+      return _adder;
+  }
+  return adder.apply(null, [].slice.call(arguments));
+}
+
+var sum = add();
+sum(1,2,3)(4);
+sum(5);
+sum() // 15
+
+优点：调用灵活，参数定义随意
+
+充分利用了柯里化提延迟执行的特点
+延迟执行 – 返回新函数可以进行任意调用
+DOM操作中的事件绑定(动态创建函数)
+当在多次调用同一个函数，并且传递的参数绝大多数是相同的。
+
+// 普通版本
+var addEvent = function(el, type, fn, capture) {
+    if (window.addEventListener) {
+      el.addEventListener(type, function(e) {
+        fn.call(el, e);
+      }, capture);
+    } else if (window.attachEvent) {
+      el.attachEvent(&quot;on&quot; + type, function(e) {
+        fn.call(el, e);
+      });
+    } 
+ };
+
+ // 柯里化版本
+ var addEvent = (function(){
+    if (window.addEventListener) {
+      return function(el, type, fn, capture) {
+        el.addEventListener(type, function(e) {
+          fn.call(el, e);
+        }, (capture));
+      };
+    } else if (window.attachEvent) {
+      return function(el, type, fn, capture) {
+        el.attachEvent(&quot;on&quot; + type, function(e) {
+            fn.call(el, e);
+        });
+      };
+    }
+})();
+
+优点：不用每次调用进行 if () {}else {} 判断兼容性问题
+</code></pre></div><p>充分利用了柯里化提前返回和延迟执行的特点
+提前返回 – 使用函数立即调用进行了一次兼容判断（部分求值），返回兼容的事件绑定方法
+延迟执行 – 返回新函数，在新函数调用兼容的事件方法。等待addEvent新函数调用，延迟执行
+当然应用场景还有很多，比如我们经常提到的防抖和节流问题，充分的利用了函数式编程的延迟执行特性，将多个间隔接近的函数执行合并成一次函数执行来提高性能问题。
+关于事件节流和防抖动将会在后续的专题中单独指出</p> <h2 id="函数式编程-函数组合"><a href="#函数式编程-函数组合" aria-hidden="true" class="header-anchor">#</a> 函数式编程-函数组合</h2> <p>\函数组合是将两个或多个函数组合以产生新函数的过程。将功能组合在一起就像将一系列管道拼凑在一起，以便我们的数据流过</p> <p>简而言之，函数 f和 g的组合可以定义为f（g（x）），它从内到外 - 从右到左进行求值</p> <p>举例子，想象一个场景，想要将用户的全名转换为URL slugs，以便为每个用户提供个人资料页面。为此，需要完成一系列步骤：</p> <ol><li>将名称拆分为空格中的数组</li> <li>将名称映射到小写</li> <li>加入破折号</li> <li>编码URI组件</li></ol> <div class="language- extra-class"><pre class="language-text"><code>// toslug.js hosted with ❤ by GitHub
+
+const toSlug = input =&gt; encodeURIComponent(
+  input.split(' ')
+    .map(str =&gt; str.toLowerCase())
+    .join('-')
+);
+</code></pre></div><p>不错......但如果我告诉你它可能更具可读性呢？想象一下，这些操作中的每一个都具有相应的可组合功能。可以写成</p> <div class="language- extra-class"><pre class="language-text"><code>// nesting-composition.js hosted with ❤ by GitHub
+
+const toSlug = input =&gt; encodeURIComponent(
+  join('-')(
+    map(toLowerCase)(
+      split(' ')(
+        input
+      )
+    )
+  )
+);
+
+console.log(toSlug('JS Cheerleader')); // 'js-cheerleader'
+</code></pre></div><p>这看起来比我们的第一次尝试更难阅读，但先放在这，我们继续以可组合形式的常用实用程序，如split（），join（）和map（）。来实现</p> <div class="language- extra-class"><pre class="language-text"><code>// composables.js hosted with ❤ by GitHub
+
+const curry = fn =&gt; (...args) =&gt; fn.bind(null, ...args);
+
+const map = curry((fn, arr) =&gt; arr.map(fn));
+
+const join = curry((str, arr) =&gt; arr.join(str));
+
+const toLowerCase = str =&gt; str.toLowerCase();
+
+const split = curry((splitOn, str) =&gt; str.split(splitOn));
+</code></pre></div><p>上面的例子在技术上并不是真的柯里化，它总能产生一元函数，但是它是一个简单的偏应用函数。请参考有关偏应用函数和柯里化的区别</p> <p>回到我们的toSlug（）实现</p> <div class="language- extra-class"><pre class="language-text"><code>// nesting-composition.js hosted with ❤ by GitHub
+
+const toSlug = input =&gt; encodeURIComponent(
+  join('-')(
+    map(toLowerCase)(
+      split(' ')(
+        input
+      )
+    )
+  )
+);
+
+console.log(toSlug('JS Cheerleader')); // 'js-cheerleader'
+</code></pre></div><p>我们可以使用一个自动组合这些函数的函数来展平嵌套，这意味着它将从一个函数获取输出并自动将其到下一个函数的输入，直到它输出最终值
+想象一下我们实现函数 reduce（） 的功能，但为了匹配上面的compose行为，我们需要它从右到左，而不是从左到右</p> <div class="language- extra-class"><pre class="language-text"><code>// compose.js hosted with ❤ by GitHub
+
+const compose = (...fns) =&gt; x =&gt; fns.reduceRight((v, f) =&gt; f(v), x);const compose = (...fns) =&gt; x =&gt; fns.reduceRight((v, f) =&gt; f(v), x);
+</code></pre></div><p>上面的 .reduceRight() 与.reduce（）一样，数组.reduceRight（）方法采用reducer函数和初始值（x）。我们迭代数组函数（从右到左），依次将每个函数应用于累加值（v）</p> <p>使用compose，我们可以在没有嵌套的情况下重写 toSlug 的组合</p> <div class="language- extra-class"><pre class="language-text"><code>// using-compose.js hosted with ❤ by GitHub
+const toSlug = compose(
+  encodeURIComponent,
+  join('-'),
+  map(toLowerCase),
+  split(' ')
+);
+
+console.log(toSlug('JS Cheerleader')); // 'js-cheerleader'
+还有另一种通常称为“pipe（）”的形式。 Lodash称之为flow（）
+
+// pipe.js hosted with ❤ by GitHub
+
+const pipe = (...fns) =&gt; x =&gt; fns.reduce((v, f) =&gt; f(v), x);
+
+const fn1 = s =&gt; s.toLowerCase();
+const fn2 = s =&gt; s.split('').reverse().join('');
+const fn3 = s =&gt; s + '!'
+
+const newFunc = pipe(fn1, fn2, fn3);
+const result = newFunc('Time'); // emit!
+我们看看用pipe（）实现的toSlug（）函数
+
+// using-pipe.js hosted with ❤ by GitHub
+
+const toSlug = pipe(
+  split(' '),
+  map(toLowerCase),
+  join('-'),
+  encodeURIComponent
+);
+
+console.log(toSlug('JS Cheerleader')); // 'js-cheerleader'
+在命令式编程中，当您对某个变量执行转换时，您将在转换的每个步骤中找到对该变量的引用。上面的pipe（）实现是以无点的方式编写的，这意味着它根本不识别它运行的参数。
+
+我经常在单元测试和Redux状态之类的东西中使用管道来消除对中间变量的需要，这些中间变量只存在于一个操作和下一个操作之间的瞬态值。
+
+// using-trace.js hosted with ❤ by GitHub
+
+const trace = curry((label, x) =&gt; {
+  console.log(`== ${ label }:  ${ x }`);
+  return x;
+});
+
+const toSlug = pipe(
+  trace('input'),
+  split(' '),
+  map(toLowerCase),
+  trace('after map'),
+  join('-'),
+  encodeURIComponent
+);
+
+console.log(toSlug('JS Cheerleader'));
+// '== input:  JS Cheerleader'
+// '== after map:  js,cheerleader'
+// 'js-cheerleader'
+trace（）只是更通用的tap（）的一种特殊形式，它允许你为流经管道的每个值执行一些操作
+
+// tap.js hosted with ❤ by GitHub
+
+const tap = curry((fn, x) =&gt; {
+  fn(x);
+  return x;
+});
+现在可以看到trace（）是一个特殊的tap（）
+
+const trace = label =&gt; {
+  return tap(x =&gt; console.log(`== ${ label }:  ${ x }`));
+};
+这样我们就大概了解到函数式编程的函数组合模式，在后续的文章中会有更多关于函数式编程介绍
+</code></pre></div><h2 id="函数式编程-point-free"><a href="#函数式编程-point-free" aria-hidden="true" class="header-anchor">#</a> 函数式编程-Point Free</h2> <p>Point-free 是一种编程风格，其中函数定义不引用函数的参数。不用关心将要操作的数据是什样的。我们来看看 JavaScript 中的函数定义：</p> <p>// 表达式
+function foo (/* parameters are declared here*/) {}</p> <p>// 声明式
+const foo = (/* parameters are declared here <em>/) =&gt; // ...
+const foo = function (/</em> parameters are declared here */) {}
+如何在不引用所需参数的情况下在 JavaScript 中定义函数？我们不能使用 functionkeyword，也不能使用箭头函数（=&gt;），因为它们需要声明形参（这将引用它的参数）。所以我们需要做的是调用一个返回函数的函数</p> <p>看一个简单的例子：</p> <p>// 非 Point-free. 因为函数引用了参数name
+var greet = function(name) {
+return ('hello ' + name).toUpperCase();
+}</p> <p>// Point-free 先定义基本的函数，不用关心中间变量str是什么，抽象基本结构
+var toUpperCase = str =&gt; str.toUpperCase();
+var hello = str =&gt; <code>hello ${str}</code>;</p> <p>var greet = compose(hello, toUpperCase);
+greet('renbo');
+在看一个例子：
+这个例子来自于Favoring Curry
+假设我们从服务器获取这样的数据：</p> <div class="language- extra-class"><pre class="language-text"><code>var data = {
+  result: &quot;SUCCESS&quot;,
+  tasks: [
+    {id: 104, complete: false,            priority: &quot;high&quot;,
+              dueDate: &quot;2013-11-29&quot;,      username: &quot;Scott&quot;,
+              title: &quot;Do something&quot;,      created: &quot;9/22/2013&quot;},
+    {id: 105, complete: false,            priority: &quot;medium&quot;,
+              dueDate: &quot;2013-11-22&quot;,      username: &quot;Lena&quot;,
+              title: &quot;Do something else&quot;, created: &quot;9/22/2013&quot;},
+    {id: 107, complete: true,             priority: &quot;high&quot;,
+              dueDate: &quot;2013-11-22&quot;,      username: &quot;Mike&quot;,
+              title: &quot;Fix the foo&quot;,       created: &quot;9/22/2013&quot;},
+    {id: 108, complete: false,            priority: &quot;low&quot;,
+              dueDate: &quot;2013-11-15&quot;,      username: &quot;Punam&quot;,
+              title: &quot;Adjust the bar&quot;,    created: &quot;9/25/2013&quot;},
+    {id: 110, complete: false,            priority: &quot;medium&quot;,
+              dueDate: &quot;2013-11-15&quot;,      username: &quot;Scott&quot;,
+              title: &quot;Rename everything&quot;, created: &quot;10/2/2013&quot;},
+    {id: 112, complete: true,             priority: &quot;high&quot;,
+              dueDate: &quot;2013-11-27&quot;,      username: &quot;Lena&quot;,
+              title: &quot;Alter all quuxes&quot;,  created: &quot;10/5/2013&quot;}
+  ]
+};
+</code></pre></div><p>我们需要一个名为 getIncompleteTaskSummaries 的函数，接收一个 username 作为参数，从服务器获取数据之后筛选出这个用户未完成的任务的 ids、priorities、titles、和 dueDate 数据，并且按照日期升序排序。</p> <p>以 Scott 为例，最终筛选出的数据为</p> <div class="language- extra-class"><pre class="language-text"><code>[
+    {id: 110, title: &quot;Rename everything&quot;, 
+        dueDate: &quot;2013-11-15&quot;, priority: &quot;medium&quot;},
+    {id: 104, title: &quot;Do something&quot;, 
+        dueDate: &quot;2013-11-29&quot;, priority: &quot;high&quot;}
+]
+</code></pre></div><p>下面得代码我们应该很熟悉</p> <div class="language- extra-class"><pre class="language-text"><code>var getIncompleteTaskSummaries = function(membername) {
+     return fetchData()
+         .then(function(data) {
+             return data.tasks;
+         })
+         .then(function(tasks) {
+             return tasks.filter(function(task) {
+                 return task.username == membername
+             })
+         })
+         .then(function(tasks) {
+             return tasks.filter(function(task) {
+                 return !task.complete
+             })
+         })
+         .then(function(tasks) {
+             return tasks.map(function(task) {
+                 return {
+                     id: task.id,
+                     dueDate: task.dueDate,
+                     title: task.title,
+                     priority: task.priority
+                 }
+             })
+         })
+         .then(function(tasks) {
+             return tasks.sort(function(first, second) {
+                 var a = first.dueDate,
+                     b = second.dueDate;
+                 return a &lt; b ? -1 : a &gt; b ? 1 : 0;
+             });
+         })
+         .then(function(task) {
+             console.log(task)
+         })
+};
+</code></pre></div><p>getIncompleteTaskSummaries('Scott')
+使用 Point-free 模式
+// 拆分基础函数
+curry 为封装的通用 curry 韩式</p> <div class="language- extra-class"><pre class="language-text"><code>var prop = curry(function(name, obj) {
+    return obj[name];
+});
+
+var propEq = curry(function(name, val, obj) {
+    return obj[name] === val;
+});
+
+var filter = curry(function(fn, arr) {
+    return arr.filter(fn)
+});
+
+var map = curry(function(fn, arr) {
+    return arr.map(fn)
+});
+
+var pick = curry(function(args, obj){
+    var result = {};
+    for (var i = 0; i &lt; args.length; i++) {
+        result[args[i]] = obj[args[i]]
+    }
+    return result;
+});
+
+var sortBy = curry(function(fn, arr) {
+    return arr.sort(function(a, b){
+        var a = fn(a),
+            b = fn(b);
+        return a &lt; b ? -1 : a &gt; b ? 1 : 0;
+    })
+});
+</code></pre></div><p>// 拼装</p> <div class="language- extra-class"><pre class="language-text"><code>var getIncompleteTaskSummaries = function(membername) {
+    return fetchData()
+        .then(prop('tasks'))
+        .then(filter(propEq('username', membername)))
+        .then(filter(propEq('complete', false)))
+        .then(map(pick(['id', 'dueDate', 'title', 'priority'])))
+        .then(sortBy(prop('dueDate')))
+};
+</code></pre></div><p>getIncompleteTaskSummaries('Scott')
+如果直接使用 ramda.js，你可以省去编写基本函数</p> <div class="language- extra-class"><pre class="language-text"><code>var getIncompleteTaskSummaries = function(membername) {
+    return fetchData()
+        .then(R.prop('tasks'))
+        .then(R.filter(R.propEq('username', membername)))
+        .then(R.filter(R.propEq('complete', false)))
+        .then(R.map(R.pick(['id', 'dueDate', 'title', 'priority'])))
+        .then(R.sortBy(R.prop('dueDate')))
+};
+
+getIncompleteTaskSummaries('Scott')
+利用 compose，也可以这样写,但是 compose 是从右到左依次执行的
+var getIncompleteTaskSummaries = function(membername) {
+    return fetchData()
+        .then(R.compose(
+            R.sortBy(R.prop('dueDate')),
+            R.map(R.pick(['id', 'dueDate', 'title', 'priority'])),
+            R.filter(R.propEq('complete', false)),
+            R.filter(R.propEq('username', membername)),
+            R.prop('tasks')
+        ))
+};
+
+getIncompleteTaskSummaries('Scott')
+我们也可以利用 ramda.js 提供的 R.pipe 函数，可以从左到右
+var getIncompleteTaskSummaries = function(membername) {
+    return fetchData()
+      .then(R.pipe(
+          R.prop('tasks'),
+          R.filter(R.propEq('username', membername)),
+          R.filter(R.propEq('complete', false)),
+          R.map(R.pick(['id', 'dueDate', 'title', 'priority']),
+          R.sortBy(R.prop('dueDate'))
+      ))
+};
+</code></pre></div><p>Point Free 风格能够帮助我们减少不必要的命名，让代码保持简洁和通用</p> <h2 id="函子"><a href="#函子" aria-hidden="true" class="header-anchor">#</a> 函子</h2> <div class="language- extra-class"><pre class="language-text"><code>class Functor {
+  constructor(val){
+    this.val = val
+  }
+  map(f){
+    return new Functor(f(this.val))
+  }
+  static of(val){
+    return new Functor(val)
+  }
+}
+
+const functor1 = Functor.of(2).map(two =&gt; two + 2)
+const functor2 = Functor.of('plus').map(name =&gt; name.toUpperCase())
+
+// console.log(functor2)
+
+//const err = Functor.of(null).map(err =&gt; err.toUpperCase())
+
+// Maybe选择执行逻辑 可用于处理error
+
+class Maybe extends Functor {
+  map(f){
+    return this.val ? Maybe.of(f(this.val)) : Maybe.of(this.val)
+  }
+  static of(val){
+    return new Maybe(val)
+  }
+}
+
+const mb = Maybe.of(2).map(x =&gt; x * 100)
+// console.log(mb)
+// const err = Maybe.of(null).map(err =&gt; err.toUpperCase())
+
+
+// Either 如果存在right值  对right值进行关系处理 否则对left值进行关系处理
+class Either extends Functor {
+  constructor(left,right){
+    super('val')
+    this.left = left
+    this.right = right
+  }
+  map(f){
+    return this.right ? Either.of(this.left,f(this.right)) : Either.of(f(this.left),this.right)
+  }
+  static of (left, right) {
+    return new Either(left, right)
+  }
+}
+
+const edit = Either.of(1,0).map(x =&gt; x + 8)
+
+// console.log(edit)
+
+// class Ap extends Functor{
+//   ap(F){
+//     return Ap.of(this.val(F.val))
+//   }
+//   static of(val){
+//     return new Ap(val)
+//   }
+// }
+// const addTwo = x =&gt; x + 2
+// const add = x =&gt; y =&gt; x + y
+
+// const res3 = Ap.of(addTwo).ap(Functor.of(2))
+// const res6 = Ap.of(add).ap(Maybe.of(2)).ap(Maybe.of(3))
+//  console.log(res6)
+
+//  七、ap 函子
+// 函子里面包含的值，完全可能是函数。我们可以想象这样一种情况，一个函子的值是数值，另一个函子的值是函数。
+
+
+function addTwo(x) {
+  return x + 2;
+}
+
+const A = Functor.of(2);
+const B = Functor.of(addTwo)
+// 上面代码中，函子A内部的值是2，函子B内部的值是函数addTwo。
+// 有时，我们想让函子B内部的函数，可以使用函子A内部的值进行运算。这时就需要用到 ap 函子。
+// ap 是 applicative（应用）的缩写。凡是部署了ap方法的函子，就是 ap 函子。
+class Ap extends Functor {
+  ap(F) {
+    return Ap.of(this.val(F.val));
+  }
+}
+// 注意，ap方法的参数不是函数，而是另一个函子。
+// 因此，前面例子可以写成下面的形式。
+Ap.of(addTwo).ap(Functor.of(2))
+// Ap(4)
+// ap 函子的意义在于，对于那些多参数的函数，就可以从多个容器之中取值，实现函子的链式操作。
+function add(x) {
+  return function (y) {
+    return x + y;
+  };
+}
+Ap.of(add).ap(Maybe.of(2)).ap(Maybe.of(3));
+// Ap(5)
+// 上面代码中，函数add是柯里化以后的形式，一共需要两个参数。通过 ap 函子，我们就可以实现从两个容器之中取值。它还有另外一种写法。
+
+Ap.of(add(2)).ap(Maybe.of(3));
+</code></pre></div><h2 id="应用"><a href="#应用" aria-hidden="true" class="header-anchor">#</a> 应用</h2> <p>// https://lambda.academy/explain-monads/</p> <p>// https://lambda.academy/</p> <p>// http://www.ruanyifeng.com/blog/2015/07/monad.html</p> <p>// 任何具有map方法的数据结构，都可以当作函子的实现。
+// 一般约定，函子的标志就是容器具有map方法。该方法将容器里面的每一个值，映射到另一个容器。
+// 函数式编程一般约定，函子有一个of方法，用来生成新的容器。
+// Maybe 函子就是为了解决这一类问题而设计的。简单说，它的map方法里面设置了空值检查
+// 条件运算if...else是最常见的运算之一，函数式编程里面，使用 Either 函子表达。
+// Either 函子内部有两个值：左值（Left）和右值（Right）。右值是正常情况下使用的值，左值是右值不存在时使用的默认值。</p> <p>// ap 函子
+// 函子里面包含的值，完全可能是函数。我们可以想象这样一种情况，一个函子的值是数值，另一个函子的值是函数
+function addTwo(x) {
+return x + 2;
+}
+const A = Functor.of(2);
+const B = Functor.of(addTwo)
+// 上面代码中，函子A内部的值是2，函子B内部的值是函数addTwo。
+// 有时，我们想让函子B内部的函数，可以使用函子A内部的值进行运算。这时就需要用到 ap 函子。
+// ap 是 applicative（应用）的缩写。凡是部署了ap方法的函子，就是 ap 函子。
+class Ap extends Functor {
+ap(F) {
+return Ap.of(this.val(F.val));
+}
+}
+// ap方法的参数不是函数，而是另一个函子。</p> <p>Ap.of(addTwo).ap(Functor.of(2))
+// Ap(4)
+// ap 函子的意义在于，对于那些多参数的函数，就可以从多个容器之中取值，实现函子的链式操作。
+function add(x) {
+return function (y) {
+return x + y;
+};
+}</p> <p>Ap.of(add).ap(Maybe.of(2)).ap(Maybe.of(3));
+// Ap(5)
+// 上面代码中，函数add是柯里化以后的形式，一共需要两个参数。通过 ap 函子，我们就可以实现从两个容器之中取值。它还有另外一种写法
+Ap.of(add(2)).ap(Maybe.of(3));</p> <p>// Monad 函子
+// 函子是一个容器，可以包含任何值。函子之中再包含一个函子，也是完全合法的。但是，这样就会出现多层嵌套的函子。
+Maybe.of(
+Maybe.of(
+Maybe.of({name: 'Mulburry', number: 8402})
+)
+)
+// 上面这个函子，一共有三个Maybe嵌套。如果要取出内部的值，就要连续取三次this.val。这当然很不方便，因此就出现了 Monad 函子
+// Monad 函子的作用是，总是返回一个单层的函子。它有一个flatMap方法，与map方法作用相同，唯一的区别是如果生成了一个嵌套函子，它会取出后者内部的值，保证返回的永远是一个单层的容器，不会出现嵌套的情况</p> <p>class Monad extends Functor {
+join() {
+return this.val;
+}
+flatMap(f) {
+return this.map(f).join();
+}
+}</p> <p>// 上面代码中，如果函数f返回的是一个函子，那么this.map(f)就会生成一个嵌套的函子。所以，join方法保证了flatMap方法总是返回一个单层的函子。这意味着嵌套的函子会被铺平（flatten）。</p> <p>// IO 操作
+// Monad 函子的重要应用，就是实现 I/O （输入输出）操作。</p> <p>// I/O 是不纯的操作，普通的函数式编程没法做，这时就需要把 IO 操作写成Monad函子，通过它来完成。</p> <p>var fs = require('fs');</p> <p>var readFile = function(filename) {
+return new IO(function() {
+return fs.readFileSync(filename, 'utf-8');
+});
+};</p> <p>var print = function(x) {
+return new IO(function() {
+console.log(x);
+return x;
+});
+}</p> <p>// 上面代码中，读取文件和打印本身都是不纯的操作，但是readFile和print却是纯函数，因为它们总是返回 IO 函子。</p> <p>// 如果 IO 函子是一个Monad，具有flatMap方法，那么我们就可以像下面这样调用这两个函数。
+readFile('./user.txt')
+.flatMap(print)</p> <p>// 这就是神奇的地方，上面的代码完成了不纯的操作，但是因为flatMap返回的还是一个 IO 函子，所以这个表达式是纯的。我们通过一个纯的表达式，完成带有副作用的操作，这就是 Monad 的作用。</p> <p>// 由于返回还是 IO 函子，所以可以实现链式操作。因此，在大多数库里面，flatMap方法被改名成chain</p> <p>var tail = function(x) {
+return new IO(function() {
+return x[x.length - 1];
+});
+}</p> <p>readFile('./user.txt')
+.flatMap(tail)
+.flatMap(print)</p> <p>// 等同于
+readFile('./user.txt')
+.chain(tail)
+.chain(print)
+// 上面代码读取了文件user.txt，然后选取最后一行输出。</p> <p>class Functor {
+constructor(val){
+this.val = val
+}
+map(f){
+return new Functor(f(this.val))
+}
+static of(val){
+return new Functor(val)
+}
+}</p> <p>const functor1 = Functor.of(2).map(two =&gt; two + 2)
+const functor2 = Functor.of('plus').map(name =&gt; name.toUpperCase())</p> <p>// console.log(functor2)</p> <p>//const err = Functor.of(null).map(err =&gt; err.toUpperCase())</p> <p>// Maybe选择执行逻辑 可用于处理error</p> <p>class Maybe extends Functor {
+map(f){
+return this.val ? Maybe.of(f(this.val)) : Maybe.of(this.val)
+}
+static of(val){
+return new Maybe(val)
+}
+}</p> <p>const mb = Maybe.of(2).map(x =&gt; x * 100)
+// console.log(mb)
+// const err = Maybe.of(null).map(err =&gt; err.toUpperCase())</p> <p>// Either 如果存在right值  对right值进行关系处理 否则对left值进行关系处理
+class Either extends Functor {
+constructor(left,right){
+super('val')
+this.left = left
+this.right = right
+}
+map(f){
+return this.right ? Either.of(this.left,f(this.right)) : Either.of(f(this.left),this.right)
+}
+static of (left, right) {
+return new Either(left, right)
+}
+}</p> <p>const edit = Either.of(1,0).map(x =&gt; x + 8)</p> <p>// console.log(edit)</p> <p>// class Ap extends Functor{
+//   ap(F){
+//     return Ap.of(this.val(F.val))
+//   }
+//   static of(val){
+//     return new Ap(val)
+//   }
+// }
+// const addTwo = x =&gt; x + 2
+// const add = x =&gt; y =&gt; x + y</p> <p>// const res3 = Ap.of(addTwo).ap(Functor.of(2))
+// const res6 = Ap.of(add).ap(Maybe.of(2)).ap(Maybe.of(3))
+//  console.log(res6)</p> <p>//  七、ap 函子
+// 函子里面包含的值，完全可能是函数。我们可以想象这样一种情况，一个函子的值是数值，另一个函子的值是函数。</p> <p>function addTwo(x) {
+return x + 2;
+}</p> <p>const A = Functor.of(2);
+const B = Functor.of(addTwo)
+// 上面代码中，函子A内部的值是2，函子B内部的值是函数addTwo。
+// 有时，我们想让函子B内部的函数，可以使用函子A内部的值进行运算。这时就需要用到 ap 函子。
+// ap 是 applicative（应用）的缩写。凡是部署了ap方法的函子，就是 ap 函子。
+class Ap extends Functor {
+ap(F) {
+return Ap.of(this.val(F.val));
+}
+}
+// 注意，ap方法的参数不是函数，而是另一个函子。
+// 因此，前面例子可以写成下面的形式。
+Ap.of(addTwo).ap(Functor.of(2))
+// Ap(4)
+// ap 函子的意义在于，对于那些多参数的函数，就可以从多个容器之中取值，实现函子的链式操作。
+function add(x) {
+return function (y) {
+return x + y;
+};
+}
+Ap.of(add).ap(Maybe.of(2)).ap(Maybe.of(3));
+// Ap(5)
+// 上面代码中，函数add是柯里化以后的形式，一共需要两个参数。通过 ap 函子，我们就可以实现从两个容器之中取值。它还有另外一种写法。</p> <p>Ap.of(add(2)).ap(Maybe.of(3));</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">有志者，事竞成；苦心人，天不负: </span> <span class="time">9/6/2019, 5:08:46 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/interview/css.html" class="prev">
+          css
+        </a></span> <span class="next"><a href="/functional/博文.html">
+          相关博文
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.6ba358d5.js" defer></script><script src="/assets/js/2.ae98e73b.js" defer></script><script src="/assets/js/12.6a6a3966.js" defer></script>
+  </body>
+</html>
